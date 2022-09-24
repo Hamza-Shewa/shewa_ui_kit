@@ -31,8 +31,33 @@ class ShewaIconButton extends StatelessWidget {
   final bool isRounded;
   final bool shadow;
   final String? tooltip;
+
   @override
   Widget build(BuildContext context) {
+    TextButtonThemeData theme = TextButtonThemeData(
+      style: ButtonStyle(
+        shadowColor: MaterialStateProperty.all(Colors.black),
+        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+        minimumSize: MaterialStateProperty.all(Size(width, height)),
+        shape: MaterialStateProperty.all(
+          isRounded
+              ? const CircleBorder()
+              : RoundedRectangleBorder(
+                  borderRadius: borderRadius,
+                ),
+        ),
+        backgroundColor: MaterialStateProperty.resolveWith(
+          (states) {
+            if (states.contains(MaterialState.pressed)) {
+              return hoverColor != null
+                  ? hoverColor!.withOpacity(0.2)
+                  : Theme.of(context).primaryColor.withOpacity(0.8);
+            }
+            return color ?? Colors.white.withOpacity(0.2);
+          },
+        ),
+      ),
+    );
     return Container(
       alignment: Alignment.center,
       padding: padding,
@@ -54,28 +79,30 @@ class ShewaIconButton extends StatelessWidget {
       ),
       child: TextButton(
         onPressed: onPressed,
-        style: Theme.of(context).textButtonTheme.style!.copyWith(
-              shadowColor: MaterialStateProperty.all(Colors.black),
-              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-              minimumSize: MaterialStateProperty.all(Size(width, height)),
-              shape: MaterialStateProperty.all(
-                isRounded
-                    ? const CircleBorder()
-                    : RoundedRectangleBorder(
-                        borderRadius: borderRadius,
-                      ),
-              ),
-              backgroundColor: MaterialStateProperty.resolveWith(
-                (states) {
-                  if (states.contains(MaterialState.pressed)) {
-                    return hoverColor != null
-                        ? hoverColor!.withOpacity(0.2)
-                        : Theme.of(context).primaryColor.withOpacity(0.8);
-                  }
-                  return color ?? Colors.white.withOpacity(0.2);
-                },
-              ),
-            ),
+        style: Theme.of(context).textButtonTheme.style == null
+            ? theme.style
+            : Theme.of(context).textButtonTheme.style!.copyWith(
+                  shadowColor: MaterialStateProperty.all(Colors.black),
+                  tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                  minimumSize: MaterialStateProperty.all(Size(width, height)),
+                  shape: MaterialStateProperty.all(
+                    isRounded
+                        ? const CircleBorder()
+                        : RoundedRectangleBorder(
+                            borderRadius: borderRadius,
+                          ),
+                  ),
+                  backgroundColor: MaterialStateProperty.resolveWith(
+                    (states) {
+                      if (states.contains(MaterialState.pressed)) {
+                        return hoverColor != null
+                            ? hoverColor!.withOpacity(0.2)
+                            : Theme.of(context).primaryColor.withOpacity(0.8);
+                      }
+                      return color ?? Colors.white.withOpacity(0.2);
+                    },
+                  ),
+                ),
         child: Tooltip(
           message: tooltip ?? '',
           child: Center(

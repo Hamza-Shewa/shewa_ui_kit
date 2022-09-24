@@ -4,7 +4,7 @@ class ShewaDrawerButton {
   const ShewaDrawerButton({
     Key? key,
     required this.icon,
-    required this.title,
+    this.title,
     required this.onPressed,
     this.color,
     this.hoverColor,
@@ -12,7 +12,7 @@ class ShewaDrawerButton {
   });
 
   final Icon icon;
-  final Widget title;
+  final Widget? title;
   final VoidCallback onPressed;
   final Color? hoverColor;
   final Color? color;
