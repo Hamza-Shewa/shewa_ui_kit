@@ -1,4 +1,3 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shewa_ui_kit/drawer/elements/shewa_drawer.dart';
@@ -6,14 +5,10 @@ import 'package:shewa_ui_kit/drawer/elements/shewa_drawer_button.dart';
 
 main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await EasyLocalization.ensureInitialized();
   runApp(
-    EasyLocalization(
-      supportedLocales: const [Locale('ar'), Locale('en')],
-      path: 'assets/translations',
-      startLocale: const Locale('ar'),
-      fallbackLocale: const Locale('en', 'US'),
-      child: const MyApp(),
+    const Directionality(
+      textDirection: TextDirection.rtl,
+      child: MyApp(),
     ),
   );
 }
@@ -25,9 +20,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'application',
-      locale: context.locale,
-      supportedLocales: context.supportedLocales,
-      localizationsDelegates: context.localizationDelegates,
       theme: ThemeData(
         backgroundColor: Colors.white,
       ),
@@ -48,14 +40,14 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      endDrawer: ShewaDrawer(
-        locale: context.locale,
+      drawer: ShewaDrawer(
+        textDirection: TextDirection.rtl,
         endDrawer: true,
         circleAvatar: const CircleAvatar(
           radius: 36,
           child: Text('hamza'),
         ),
-        leading: ListTile(
+        leading: const ListTile(
           title: Text('hamza bashir'),
           subtitle: Text('administrator'),
         ),

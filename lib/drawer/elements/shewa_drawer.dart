@@ -15,7 +15,7 @@ class ShewaDrawer extends StatefulWidget {
     this.leading,
     required this.icon,
     required this.buttons,
-    required this.locale,
+    required this.textDirection,
     this.divider,
     this.minWidth = 75,
     this.maxWidth = 250,
@@ -42,7 +42,7 @@ class ShewaDrawer extends StatefulWidget {
   final Color? backgroundColor;
   final bool endDrawer;
   final bool isExpanded;
-  final Locale locale;
+  final TextDirection textDirection;
   final Widget? circleAvatar;
   final bool alwaysShowHeader;
 
@@ -56,12 +56,10 @@ class ShewaDrawerState extends State<ShewaDrawer>
   late Animation<double> widthAnimation;
   final List<Widget> buttons = [];
   BorderRadiusGeometry? borderRadius;
-  late Locale l;
   final ScrollController _controller = ScrollController();
 
   @override
   void initState() {
-    l = widget.locale;
     a = AnimationController(vsync: this, duration: widget.duration);
     widthAnimation = Tween<double>(
       begin: widget.isExpanded ? widget.maxWidth : widget.minWidth,
@@ -82,7 +80,7 @@ class ShewaDrawerState extends State<ShewaDrawer>
       onHorizontalDragUpdate: (DragUpdateDetails e) async {
         if (a.isAnimating) return;
         if (widget.endDrawer) {
-          if (l.languageCode == 'ar') {
+          if (widget.textDirection == TextDirection.rtl) {
             if (e.primaryDelta!.isNegative) {
               await a.reverse();
             } else {
@@ -96,7 +94,7 @@ class ShewaDrawerState extends State<ShewaDrawer>
             }
           }
         } else {
-          if (l.languageCode == 'ar') {
+          if (widget.textDirection == TextDirection.rtl) {
             if (e.primaryDelta!.isNegative) {
               await a.forward();
             } else {
@@ -117,7 +115,7 @@ class ShewaDrawerState extends State<ShewaDrawer>
           decoration: BoxDecoration(
             color: widget.backgroundColor ?? Theme.of(context).backgroundColor,
             borderRadius: widget.endDrawer == true
-                ? l.languageCode != 'ar'
+                ? widget.textDirection == TextDirection.ltr
                     ? const BorderRadius.only(
                         bottomLeft: Radius.circular(15),
                         topLeft: Radius.circular(15),
@@ -126,7 +124,7 @@ class ShewaDrawerState extends State<ShewaDrawer>
                         bottomRight: Radius.circular(15),
                         topRight: Radius.circular(15),
                       )
-                : l.languageCode == 'ar'
+                : widget.textDirection == TextDirection.rtl
                     ? const BorderRadius.only(
                         bottomLeft: Radius.circular(15),
                         topLeft: Radius.circular(15),
@@ -213,10 +211,10 @@ class ShewaDrawerState extends State<ShewaDrawer>
 
   Widget collapseButton(ShewaDrawerButton? value) {
     TextDirection? direction = widget.endDrawer
-        ? l.languageCode == 'ar'
+        ? widget.textDirection == TextDirection.rtl
             ? TextDirection.ltr
             : TextDirection.rtl
-        : l.languageCode != 'ar'
+        : widget.textDirection == TextDirection.ltr
             ? TextDirection.ltr
             : TextDirection.rtl;
 
@@ -232,7 +230,7 @@ class ShewaDrawerState extends State<ShewaDrawer>
           decoration: BoxDecoration(
             color: value.barColor ?? Theme.of(context).primaryColorDark,
             borderRadius: widget.endDrawer == true
-                ? l.languageCode != 'ar'
+                ? widget.textDirection == TextDirection.ltr
                     ? const BorderRadius.only(
                         bottomLeft: Radius.circular(15),
                         topLeft: Radius.circular(15),
@@ -241,7 +239,7 @@ class ShewaDrawerState extends State<ShewaDrawer>
                         bottomRight: Radius.circular(15),
                         topRight: Radius.circular(15),
                       )
-                : l.languageCode == 'ar'
+                : widget.textDirection == TextDirection.rtl
                     ? const BorderRadius.only(
                         bottomLeft: Radius.circular(15),
                         topLeft: Radius.circular(15),
