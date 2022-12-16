@@ -11,7 +11,7 @@ class ShewaSnackbar {
   }
 
   /// Helper method to show a snackbar.
-  Future<void> show(String message, Color color) async {
+  Future<void> show(String message, Color color, Color? textColor) async {
     ScaffoldMessenger.of(_context).showSnackBar(
       SnackBar(
         backgroundColor: color,
@@ -32,6 +32,7 @@ class ShewaSnackbar {
             message,
             style: Theme.of(_context).textTheme.headline5!.copyWith(
                   fontWeight: FontWeight.bold,
+                  color: textColor ?? Theme.of(_context).backgroundColor,
                 ),
           ),
         ),
