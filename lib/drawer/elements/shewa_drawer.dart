@@ -229,7 +229,7 @@ class ShewaDrawerState extends State<ShewaDrawer>
           height: 45,
           width: 5,
           decoration: BoxDecoration(
-            color: value.barColor ?? Theme.of(context).backgroundColor,
+            color: value.barColor ?? Theme.of(context).primaryColor,
             borderRadius: widget.endDrawer == true
                 ? widget.textDirection == TextDirection.ltr
                     ? const BorderRadius.only(
