@@ -181,6 +181,7 @@ class ShewaDrawerState extends State<ShewaDrawer>
                       icon: AnimatedIcon(
                         progress: a,
                         icon: widget.icon,
+                        color: Theme.of(context).primaryColor,
                       ),
                     ),
                   ],
@@ -228,7 +229,7 @@ class ShewaDrawerState extends State<ShewaDrawer>
           height: 45,
           width: 5,
           decoration: BoxDecoration(
-            color: value.barColor ?? Theme.of(context).primaryColorDark,
+            color: value.barColor ?? Theme.of(context).backgroundColor,
             borderRadius: widget.endDrawer == true
                 ? widget.textDirection == TextDirection.ltr
                     ? const BorderRadius.only(
