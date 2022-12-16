@@ -11,11 +11,16 @@ class ShewaSnackbar {
   }
 
   /// Helper method to show a snackbar.
-  Future<void> show(String message, Color color, Color? textColor) async {
+  ///[textStyle] overrides the default [textColor] parameter.
+  ///[duration] is the time the snackbar will be shown.
+  ///[color] is the background color of the snackbar.
+  ///[textColor] is the color of the text.
+  Future<void> show(String message, Color color,
+      {Color? textColor, Duration? duration, TextStyle? textStyle}) async {
     ScaffoldMessenger.of(_context).showSnackBar(
       SnackBar(
         backgroundColor: color,
-        duration: const Duration(seconds: 1),
+        duration: duration ?? const Duration(seconds: 1),
         behavior: SnackBarBehavior.floating,
         elevation: 25,
         shape: const RoundedRectangleBorder(
@@ -30,10 +35,11 @@ class ShewaSnackbar {
           alignment: Alignment.center,
           child: Text(
             message,
-            style: Theme.of(_context).textTheme.headline5!.copyWith(
-                  fontWeight: FontWeight.bold,
-                  color: textColor ?? Theme.of(_context).backgroundColor,
-                ),
+            style: textStyle ??
+                Theme.of(_context).textTheme.headline5!.copyWith(
+                      fontWeight: FontWeight.bold,
+                      color: textColor ?? Theme.of(_context).backgroundColor,
+                    ),
           ),
         ),
       ),

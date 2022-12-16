@@ -139,7 +139,7 @@ class ShewaAlerts {
     );
   }
 
-  static Future ShewaConfirmation(
+  static Future shewaConfirmation(
     context, {
     required VoidCallback confirm,
     VoidCallback? cancel,
@@ -148,6 +148,8 @@ class ShewaAlerts {
     String? okText,
     String? cancelText,
   }) async {
+    bool isArabic =
+        Localizations.localeOf(context).languageCode == 'ar' ? true : false;
     AlertDialog a = AlertDialog(
       elevation: 0,
       contentPadding: const EdgeInsets.all(8),
@@ -177,7 +179,7 @@ class ShewaAlerts {
       actions: [
         MaterialButton(
           child: Text(
-            okText ?? 'تأكيد',
+            okText ?? (isArabic ? 'تأكيد' : 'Confirm'),
             style: Theme.of(context).textTheme.headline5!.copyWith(
                   color: ShewaColors.success.withOpacity(0.8),
                 ),
@@ -195,7 +197,7 @@ class ShewaAlerts {
             Navigator.pop(context);
           },
           child: Text(
-            cancelText ?? 'الغاء',
+            cancelText ?? (isArabic ? 'الغاء' : 'Cancel'),
             style: Theme.of(context).textTheme.headline5!.copyWith(
                   color: ShewaColors.danger.withOpacity(0.8),
                 ),
