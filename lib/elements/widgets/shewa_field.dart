@@ -78,6 +78,9 @@ class ShewaField extends StatelessWidget {
           hintStyle: TextStyle(
             color: theme.primaryColor,
           ),
+          labelStyle: TextStyle(
+            color: theme.primaryColor,
+          ),
           prefix: prefix,
           isDense: false,
           enabledBorder: OutlineInputBorder(
