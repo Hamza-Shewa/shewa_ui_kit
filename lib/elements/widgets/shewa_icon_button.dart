@@ -46,6 +46,16 @@ class ShewaIconButton extends StatelessWidget {
                   borderRadius: borderRadius,
                 ),
         ),
+        overlayColor: MaterialStateProperty.resolveWith(
+          (states) {
+            if (states.contains(MaterialState.pressed)) {
+              return hoverColor != null
+                  ? hoverColor!.withOpacity(0.3)
+                  : Theme.of(context).primaryColor.withOpacity(0.8);
+            }
+            return color ?? Colors.white.withOpacity(0.3);
+          },
+        ),
         backgroundColor: MaterialStateProperty.resolveWith(
           (states) {
             if (states.contains(MaterialState.pressed)) {
