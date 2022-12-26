@@ -55,14 +55,14 @@ class ShewaOutLinedButton extends StatelessWidget {
           overlayColor: MaterialStateProperty.resolveWith(
             (states) {
               if (states.contains(MaterialState.hovered)) {
-                return hoverColor == null
+                return hoverColor != null
                     ? hoverColor!.withOpacity(.2)
                     : color == null
                         ? theme.primaryColor.withOpacity(.2)
                         : color!.withOpacity(.2);
               }
               if (states.contains(MaterialState.pressed)) {
-                return hoverColor == null
+                return hoverColor != null
                     ? hoverColor!.withOpacity(.4)
                     : color == null
                         ? theme.primaryColor.withOpacity(.4)
