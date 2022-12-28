@@ -15,6 +15,7 @@ class ShewaButton extends StatelessWidget {
     this.margin = const EdgeInsets.all(0),
     this.leading,
     this.borderColor,
+    this.expandedText = false,
   }) : super(key: key);
 
   final Function()? onPressed;
@@ -29,6 +30,7 @@ class ShewaButton extends StatelessWidget {
   final EdgeInsetsGeometry margin;
   final Widget? leading;
   final Color? borderColor;
+  final bool expandedText;
 
   @override
   Widget build(BuildContext context) {
@@ -80,6 +82,7 @@ class ShewaButton extends StatelessWidget {
                 child: leading,
               ),
             Expanded(
+              flex: expandedText ? 1 : 0,
               child: Text(
                 text,
                 style: textStyle ??
