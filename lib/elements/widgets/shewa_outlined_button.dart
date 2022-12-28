@@ -81,16 +81,19 @@ class ShewaOutLinedButton extends StatelessWidget {
         ),
         child: Row(
           mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: expandedText
+              ? MainAxisAlignment.spaceBetween
+              : MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             if (leading != null)
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 4),
                 child: leading,
-              ),
-            Expanded(
-              flex: expandedText ? 1 : 0,
+              )
+            else
+              const SizedBox(),
+            Flexible(
               child: Text(
                 text,
                 style: textStyle ??
@@ -102,7 +105,9 @@ class ShewaOutLinedButton extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 4),
                 child: icon,
-              ),
+              )
+            else
+              const SizedBox(),
           ],
         ),
       ),
