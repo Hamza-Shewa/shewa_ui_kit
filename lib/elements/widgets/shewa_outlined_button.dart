@@ -87,12 +87,15 @@ class ShewaOutLinedButton extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             if (leading != null)
-              Padding(
+              Container(
+                width: 50,
                 padding: const EdgeInsets.symmetric(horizontal: 4),
                 child: leading,
               )
             else
-              const SizedBox(),
+              const SizedBox(
+                width: 50,
+              ),
             Flexible(
               child: Text(
                 text,
@@ -102,12 +105,15 @@ class ShewaOutLinedButton extends StatelessWidget {
               ),
             ),
             if (icon != null)
-              Padding(
+              Container(
+                width: 50,
                 padding: const EdgeInsets.symmetric(horizontal: 4),
                 child: icon,
               )
             else
-              const SizedBox(),
+              const SizedBox(
+                width: 50,
+              ),
           ],
         ),
       ),
