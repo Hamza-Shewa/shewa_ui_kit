@@ -71,7 +71,6 @@ class ShewaButton extends StatelessWidget {
           }),
         ),
         child: Row(
-          mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -80,7 +79,7 @@ class ShewaButton extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 4),
                 child: leading,
               ),
-            Flexible(
+            Expanded(
               child: Text(
                 text,
                 style: textStyle ??
