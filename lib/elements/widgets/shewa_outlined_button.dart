@@ -16,6 +16,7 @@ class ShewaOutLinedButton extends StatelessWidget {
     this.leading,
     this.textColor = Colors.black87,
     this.expandedText = false,
+    this.radius = 5,
   }) : super(key: key);
 
   final Function()? onPressed;
@@ -31,6 +32,7 @@ class ShewaOutLinedButton extends StatelessWidget {
   final Widget? leading;
   final Color? textColor;
   final bool expandedText;
+  final double radius;
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -40,7 +42,7 @@ class ShewaOutLinedButton extends StatelessWidget {
       padding: padding,
       margin: margin,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(5),
+        borderRadius: BorderRadius.circular(radius),
         border: Border.all(
           color: color ?? theme.primaryColor,
         ),
@@ -50,7 +52,7 @@ class ShewaOutLinedButton extends StatelessWidget {
         style: theme.textButtonTheme.style?.copyWith(
           shape: MaterialStateProperty.all(
             RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(5),
+              borderRadius: BorderRadius.circular(radius),
             ),
           ),
           overlayColor: MaterialStateProperty.resolveWith(
