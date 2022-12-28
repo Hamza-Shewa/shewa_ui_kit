@@ -46,7 +46,7 @@ class ShewaOutLinedButton extends StatelessWidget {
       ),
       child: TextButton(
         onPressed: onPressed,
-        style: theme.textButtonTheme.style!.copyWith(
+        style: theme.textButtonTheme.style?.copyWith(
           shape: MaterialStateProperty.all(
             RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(5),
@@ -92,7 +92,7 @@ class ShewaOutLinedButton extends StatelessWidget {
               child: Text(
                 text,
                 style: textStyle ??
-                    theme.textTheme.headline6!.copyWith(color: textColor),
+                    theme.textTheme.headline6?.copyWith(color: textColor),
                 textAlign: TextAlign.center,
               ),
             ),

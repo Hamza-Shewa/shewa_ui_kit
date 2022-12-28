@@ -40,7 +40,7 @@ class ShewaButton extends StatelessWidget {
       margin: margin,
       child: TextButton(
         onPressed: onPressed,
-        style: theme.textButtonTheme.style!.copyWith(
+        style: theme.textButtonTheme.style?.copyWith(
           shape: MaterialStateProperty.all(
             RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(5),
@@ -83,7 +83,7 @@ class ShewaButton extends StatelessWidget {
               child: Text(
                 text,
                 style: textStyle ??
-                    theme.textTheme.headline6!.copyWith(
+                    theme.textTheme.headline6?.copyWith(
                       color: color == Colors.transparent
                           ? theme.primaryColorDark
                           : theme.primaryColorLight,
