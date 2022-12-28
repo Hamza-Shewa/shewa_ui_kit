@@ -80,7 +80,6 @@ class ShewaOutLinedButton extends StatelessWidget {
           ),
         ),
         child: Row(
-          mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: expandedText
               ? MainAxisAlignment.spaceBetween
               : MainAxisAlignment.center,
