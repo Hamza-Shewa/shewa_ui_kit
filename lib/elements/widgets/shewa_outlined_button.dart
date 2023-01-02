@@ -37,8 +37,8 @@ class ShewaOutLinedButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     List<Widget> children = [];
-    if (leading != null) {
-      if (expandedText) {
+    if (expandedText) {
+      if (leading != null) {
         children.add(
           SizedBox(
             width: 50,
@@ -46,6 +46,10 @@ class ShewaOutLinedButton extends StatelessWidget {
           ),
         );
       } else {
+        children.add(const SizedBox(width: 50));
+      }
+    } else {
+      if (leading != null) {
         children.add(leading!);
       }
     }
@@ -65,8 +69,8 @@ class ShewaOutLinedButton extends StatelessWidget {
         ),
       );
     }
-    if (icon != null) {
-      if (expandedText) {
+    if (expandedText) {
+      if (icon != null) {
         children.add(
           SizedBox(
             width: 50,
@@ -74,6 +78,10 @@ class ShewaOutLinedButton extends StatelessWidget {
           ),
         );
       } else {
+        children.add(const SizedBox(width: 50));
+      }
+    } else {
+      if (icon != null) {
         children.add(icon!);
       }
     }
