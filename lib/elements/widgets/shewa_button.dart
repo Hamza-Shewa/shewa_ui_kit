@@ -36,6 +36,47 @@ class ShewaButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    List<Widget> children = [];
+    if (leading != null) {
+      if (expandedText) {
+        children.add(
+          SizedBox(
+            width: 50,
+            child: leading!,
+          ),
+        );
+      } else {
+        children.add(leading!);
+      }
+    }
+    if (text.isNotEmpty) {
+      children.add(
+        Flexible(
+          child: Text(
+            text,
+            style: textStyle ??
+                theme.textTheme.headline6?.copyWith(
+                  color: color == Colors.transparent
+                      ? theme.primaryColorDark
+                      : theme.primaryColorLight,
+                ),
+            textAlign: TextAlign.center,
+          ),
+        ),
+      );
+    }
+    if (icon != null) {
+      if (expandedText) {
+        children.add(
+          SizedBox(
+            width: 50,
+            child: icon!,
+          ),
+        );
+      } else {
+        children.add(icon!);
+      }
+    }
     return Container(
       width: width,
       height: height,
@@ -82,44 +123,13 @@ class ShewaButton extends StatelessWidget {
           }),
         ),
         child: Row(
-          mainAxisAlignment: expandedText
-              ? MainAxisAlignment.spaceBetween
-              : MainAxisAlignment.center,
+          mainAxisAlignment: children.length == 1
+              ? MainAxisAlignment.center
+              : expandedText
+                  ? MainAxisAlignment.spaceBetween
+                  : MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            if (leading != null)
-              Container(
-                width: 50,
-                padding: const EdgeInsets.symmetric(horizontal: 4),
-                child: leading,
-              )
-            else
-              const SizedBox(
-                width: 50,
-              ),
-            Flexible(
-              child: Text(
-                text,
-                style: textStyle ??
-                    theme.textTheme.headline6?.copyWith(
-                      color: color == Colors.transparent
-                          ? theme.primaryColorDark
-                          : theme.primaryColorLight,
-                    ),
-                textAlign: TextAlign.center,
-              ),
-            ),
-            if (icon != null)
-              Container(
-                width: 50,
-                padding: const EdgeInsets.symmetric(horizontal: 4),
-                child: icon,
-              )
-            else
-              const SizedBox(
-                width: 50,
-              ),
-          ],
+          children: children,
         ),
       ),
     );
