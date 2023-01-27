@@ -61,8 +61,8 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
-    - shewa_ui_kit/lib/assets/countries/
-    - shewa_ui_kit/lib/assets/countries/flags/
+    - lib/assets/countries/
+    - lib/assets/countries/flags/
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
