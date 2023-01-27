@@ -89,15 +89,11 @@ class ShewaDropdownButtonState extends State<ShewaDropdownButton> {
     var size = renderBox.size;
     return OverlayEntry(
       builder: (context) => Positioned(
-        // textDirection: Localizations.localeOf(context).languageCode == 'ar'
-        //     ? TextDirection.rtl
-        //     : TextDirection.ltr,
         width: 250,
         child: CompositedTransformFollower(
           link: _layerLink,
           showWhenUnlinked: false,
           offset: Offset(
-            //widget.centerDropDown ? 0 : renderBox.globalToLocal(Offset.zero).dx,
             0,
             size.height,
           ),
@@ -120,6 +116,9 @@ class ShewaDropdownButtonState extends State<ShewaDropdownButton> {
                             widget.shewaDropDownStyle?.dropDownFieldlabel ?? '',
                         hint:
                             widget.shewaDropDownStyle?.dropDownFieldHint ?? '',
+                        hintStyle:
+                            widget.shewaDropDownStyle?.dtopDownHintTextStyle,
+                        style: widget.shewaDropDownStyle?.dropDownTextStyle,
                         onChanged: (v) {
                           search = v;
                           update(() {});
@@ -184,7 +183,8 @@ class ShewaDropdownButtonState extends State<ShewaDropdownButton> {
               const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
           child: Row(
             children: [
-              if (widget.shewaDropDownStyle?.prefix ?? false)
+              if (_controller.text.isNotEmpty &&
+                  (widget.shewaDropDownStyle?.prefix ?? false))
                 Container(
                   margin: widget.shewaDropDownStyle?.mainFieldIconMargin,
                   child: SizedBox(
@@ -197,8 +197,10 @@ class ShewaDropdownButtonState extends State<ShewaDropdownButton> {
               Focus(
                 focusNode: _focusNode,
                 child: _controller.text.isNotEmpty
-                    ? Text(_controller.text)
-                    : Text(widget.shewaDropDownStyle?.mainFieldHint ?? ''),
+                    ? Text(_controller.text,
+                        style: widget.shewaDropDownStyle?.mainTextStyle)
+                    : Text(widget.shewaDropDownStyle?.mainFieldHint ?? '',
+                        style: widget.shewaDropDownStyle?.mainHintTextStyle),
               )
             ],
           ),
@@ -223,6 +225,11 @@ class ShewaDropDownStyle {
   final EdgeInsetsGeometry contentPadding;
   final BoxDecoration? fieldDecoration;
   final EdgeInsetsGeometry? mainFieldIconMargin;
+  final TextStyle? mainTextStyle;
+  final TextStyle? mainHintTextStyle;
+  final TextStyle? dropDownTextStyle;
+  final TextStyle? dtopDownHintTextStyle;
+
   ShewaDropDownStyle({
     this.mainFieldTextAlign,
     this.dropDownFieldTextAlign,
@@ -239,6 +246,10 @@ class ShewaDropDownStyle {
         const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
     this.fieldDecoration,
     this.mainFieldIconMargin,
+    this.mainHintTextStyle,
+    this.dropDownTextStyle,
+    this.dtopDownHintTextStyle,
+    this.mainTextStyle,
   });
 
   ShewaDropDownStyle copyWith({

@@ -1,29 +1,31 @@
 import 'package:flutter/material.dart';
 
 class ShewaField extends StatelessWidget {
-  const ShewaField(
-      {required this.label,
-      required this.hint,
-      required this.controller,
-      this.obscureText = false,
-      this.readOnly = false,
-      this.textInputType = TextInputType.text,
-      this.suffix,
-      this.onChanged,
-      required this.validator,
-      this.onSubmit,
-      this.prefix,
-      this.onTap,
-      this.padding = const EdgeInsets.all(0),
-      this.margin = const EdgeInsets.all(0),
-      this.maxLines = 1,
-      this.width = 250,
-      this.height,
-      this.textAlign = TextAlign.start,
-      this.focusNode,
-      this.contentPadding = const EdgeInsets.all(0),
-      Key? key})
-      : super(key: key);
+  const ShewaField({
+    required this.label,
+    required this.hint,
+    required this.controller,
+    this.obscureText = false,
+    this.readOnly = false,
+    this.textInputType = TextInputType.text,
+    this.suffix,
+    this.onChanged,
+    required this.validator,
+    this.onSubmit,
+    this.prefix,
+    this.onTap,
+    this.padding = const EdgeInsets.all(0),
+    this.margin = const EdgeInsets.all(0),
+    this.maxLines = 1,
+    this.width = 250,
+    this.height,
+    this.textAlign = TextAlign.start,
+    this.focusNode,
+    this.contentPadding = const EdgeInsets.all(0),
+    this.style,
+    this.hintStyle,
+    Key? key,
+  }) : super(key: key);
 
   final Function(String)? onChanged;
   final Function(String)? onSubmit;
@@ -45,6 +47,8 @@ class ShewaField extends StatelessWidget {
   final String? Function(String?) validator;
   final double width;
   final EdgeInsetsGeometry contentPadding;
+  final TextStyle? style;
+  final TextStyle? hintStyle;
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -63,7 +67,7 @@ class ShewaField extends StatelessWidget {
         obscureText: obscureText,
         validator: validator,
         textAlign: textAlign,
-        style: theme.textTheme.headline5,
+        style: style ?? theme.textTheme.headline5,
         onChanged: onChanged,
         controller: controller,
         decoration: InputDecoration(
@@ -77,9 +81,10 @@ class ShewaField extends StatelessWidget {
           labelText: label,
           suffixIcon: suffix,
           hintText: hint,
-          hintStyle: TextStyle(
-            color: theme.primaryColor,
-          ),
+          hintStyle: hintStyle ??
+              TextStyle(
+                color: theme.primaryColor,
+              ),
           labelStyle: TextStyle(
             color: theme.primaryColor,
           ),

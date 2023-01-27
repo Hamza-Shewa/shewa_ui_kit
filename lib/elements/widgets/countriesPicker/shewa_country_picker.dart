@@ -69,7 +69,7 @@ class _ShewaCountryPickerState extends State<ShewaCountryPicker> {
                   ),
                   title: Text(
                     countries[index].enName,
-                    style: theme.textTheme.bodyText1,
+                    style: widget.shewaDropDownStyle?.dropDownTextStyle,
                   ),
                 ),
           onTap: () {
