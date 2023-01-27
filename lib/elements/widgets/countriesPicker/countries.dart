@@ -7,7 +7,7 @@ class Countries {
     List<Country> countries = [];
     try {
       final String loadCountries =
-          await rootBundle.loadString('lib/assets/countries/countries.json');
+          await rootBundle.loadString('shewa_ui_kit/lib/assets/countries/countries.json');
       final data = await jsonDecode(loadCountries);
       data.forEach((element) {
         countries.add(Country.fromMap(element));
