@@ -45,7 +45,6 @@ class _ShewaCountryPickerState extends State<ShewaCountryPicker> {
   Widget build(BuildContext context) {
     return ShewaDropdownButton(
       controller: controller,
-      centerDropDown: true,
       searchField: true,
       shewaDropDownStyle: widget.shewaDropDownStyle ??
           ShewaDropDownStyle(
@@ -58,17 +57,26 @@ class _ShewaCountryPickerState extends State<ShewaCountryPicker> {
           item: widget.widgetItem != null
               ? widget.widgetItem!(countries[index])
               : ListTile(
-                  leading: SizedBox(
-                    height: 20,
-                    width: 20,
-                    child: Image.asset(
-                      countries[index].flag,
-                      fit: BoxFit.cover,
+                  minLeadingWidth: 40,
+                  contentPadding: const EdgeInsetsDirectional.only(start: 8),
+                  leading: ClipRRect(
+                    borderRadius: BorderRadius.circular(5),
+                    child: SizedBox(
+                      height: 30,
+                      width: 40,
+                      child: Image.asset(
+                        countries[index].flag,
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                   title: Text(
                     countries[index].enName,
-                    style: widget.shewaDropDownStyle?.dropDownTextStyle,
+                    style: widget.shewaDropDownStyle?.dropDownTextStyle ??
+                        const TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w400,
+                        ),
                   ),
                 ),
           onTap: () {

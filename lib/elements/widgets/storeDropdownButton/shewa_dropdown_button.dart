@@ -11,7 +11,6 @@ class ShewaDropdownButton extends StatefulWidget {
     Key? key,
     required this.items,
     this.onChanged,
-    this.centerDropDown = false,
     this.searchField = false,
     this.initialValue,
     required this.controller,
@@ -19,7 +18,6 @@ class ShewaDropdownButton extends StatefulWidget {
   }) : super(key: key);
   final List<ShewaDropdownItem<Country>> items;
   final Function(Object value)? onChanged;
-  final bool centerDropDown;
   final bool searchField;
   final String? initialValue;
   final ShewaDropDownController controller;
@@ -88,7 +86,7 @@ class ShewaDropdownButtonState extends State<ShewaDropdownButton> {
     var size = renderBox.size;
     return OverlayEntry(
       builder: (context) => Positioned(
-        width: 250,
+        width: size.width,
         child: CompositedTransformFollower(
           link: _layerLink,
           showWhenUnlinked: false,
@@ -165,46 +163,60 @@ class ShewaDropdownButtonState extends State<ShewaDropdownButton> {
   Widget build(BuildContext context) {
     return CompositedTransformTarget(
       link: _layerLink,
-      child: InkWell(
-        onTap: () {
-          _focusNode.requestFocus();
-        },
-        child: Container(
-          height: widget.shewaDropDownStyle?.mainFieldHeight,
-          width: widget.shewaDropDownStyle?.mainFieldWidth,
-          decoration: widget.shewaDropDownStyle?.fieldDecoration ??
-              BoxDecoration(
-                border: Border.all(
-                  color: widget.shewaDropDownStyle?.mainFieldBorderColor ??
-                      Colors.grey,
-                ),
-                borderRadius: BorderRadius.circular(5),
-              ),
-          padding: widget.shewaDropDownStyle?.contentPadding ??
-              const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
-          child: Row(
-            children: [
-              if (_controller.text.isNotEmpty &&
-                  (widget.shewaDropDownStyle?.prefix ?? false)) ...[
-                Container(
-                  margin: widget.shewaDropDownStyle?.mainFieldIconMargin,
-                  child: SizedBox(
-                    width: widget.shewaDropDownStyle?.prefixSize?.width,
-                    height: widget.shewaDropDownStyle?.prefixSize?.height,
-                    child: prefix,
+      child: Focus(
+        focusNode: _focusNode,
+        child: InkWell(
+          onTap: () {
+            _focusNode.requestFocus();
+          },
+          child: Container(
+            height: widget.shewaDropDownStyle?.mainFieldHeight,
+            width: widget.shewaDropDownStyle?.mainFieldWidth,
+            decoration: widget.shewaDropDownStyle?.fieldDecoration ??
+                BoxDecoration(
+                  border: Border.all(
+                    color: widget.shewaDropDownStyle?.mainFieldBorderColor ??
+                        Colors.grey,
                   ),
+                  borderRadius: BorderRadius.circular(5),
                 ),
-                const SizedBox(width: 8),
+            padding: widget.shewaDropDownStyle?.contentPadding ??
+                const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
+            child: Row(
+              children: [
+                if (_controller.text.isNotEmpty &&
+                    (widget.shewaDropDownStyle?.prefix ?? false)) ...[
+                  Container(
+                    margin: widget.shewaDropDownStyle?.mainFieldIconMargin ??
+                        const EdgeInsetsDirectional.only(end: 8),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(5),
+                      child: SizedBox(
+                        width:
+                            widget.shewaDropDownStyle?.prefixSize?.width ?? 40,
+                        height:
+                            widget.shewaDropDownStyle?.prefixSize?.height ?? 30,
+                        child: prefix,
+                      ),
+                    ),
+                  ),
+                ],
+                _controller.text.isNotEmpty
+                    ? Flexible(
+                        child: Text(
+                          _controller.text,
+                          style: widget.shewaDropDownStyle?.mainTextStyle,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      )
+                    : Flexible(
+                        child: Text(
+                          widget.shewaDropDownStyle?.mainFieldHint ?? '',
+                          style: widget.shewaDropDownStyle?.mainHintTextStyle,
+                        ),
+                      )
               ],
-              Focus(
-                focusNode: _focusNode,
-                child: _controller.text.isNotEmpty
-                    ? Text(_controller.text,
-                        style: widget.shewaDropDownStyle?.mainTextStyle)
-                    : Text(widget.shewaDropDownStyle?.mainFieldHint ?? '',
-                        style: widget.shewaDropDownStyle?.mainHintTextStyle),
-              )
-            ],
+            ),
           ),
         ),
       ),
@@ -242,7 +254,7 @@ class ShewaDropDownStyle {
     this.mainFieldWidth = 200,
     this.mainFieldHeight = 40,
     this.prefix = false,
-    this.prefixSize,
+    this.prefixSize = const Size(40, 30),
     this.mainFieldBorderColor,
     this.contentPadding =
         const EdgeInsets.symmetric(horizontal: 8, vertical: 6),

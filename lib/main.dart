@@ -108,18 +108,17 @@ class _HomeState extends State<Home> {
           ),
         ),
         body: Column(
-          crossAxisAlignment: CrossAxisAlignment.end,
+          // crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Align(
-              alignment: Alignment.centerRight,
-              child: Container(
-                width: 250,
-                alignment: Alignment.centerRight,
-                child: ShewaCountryPicker(
-                  onTap: (String coountry) {
-                    print(coountry);
-                  },
+            Container(
+              width: 150,
+              child: ShewaCountryPicker(
+                shewaDropDownStyle: ShewaDropDownStyle(
+                  prefix: true,
                 ),
+                onTap: (coountry) {
+                  print(coountry);
+                },
               ),
             ),
             ShewaButton(
@@ -136,7 +135,7 @@ class _HomeState extends State<Home> {
                             text: 'go back',
                           ),
                           ShewaCountryPicker(
-                            onTap: (String coountry) {
+                            onTap: (coountry) {
                               print(coountry);
                             },
                           ),
