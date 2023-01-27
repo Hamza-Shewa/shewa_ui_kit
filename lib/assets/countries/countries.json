@@ -3,1694 +3,1694 @@
     "name_en": "Andorra",
     "name_ar": "أندورا",
     "dialCode": "+376",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/ad.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/ad.jpg",
     "id": "AD"
   },
   {
     "name_en": "United Arab Emirates",
     "name_ar": "الامارات العربية المتحدة",
     "dialCode": "+971",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/ae.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/ae.jpg",
     "id": "AE"
   },
   {
     "name_en": "Afghanistan",
     "name_ar": "أفغانستان",
     "dialCode": "+93",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/af.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/af.jpg",
     "id": "AF"
   },
   {
     "name_en": "Antigua and Barbuda",
     "name_ar": "أنتيجوا وبربودا",
     "dialCode": "+1268",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/ag.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/ag.jpg",
     "id": "AG"
   },
   {
     "name_en": "Anguilla",
     "name_ar": "أنجويلا",
     "dialCode": "+1264",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/ai.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/ai.jpg",
     "id": "AI"
   },
   {
     "name_en": "Albania",
     "name_ar": "ألبانيا",
     "dialCode": "+355",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/al.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/al.jpg",
     "id": "AL"
   },
   {
     "name_en": "Armenia",
     "name_ar": "أرمينيا",
     "dialCode": "+374",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/am.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/am.jpg",
     "id": "AM"
   },
   {
     "name_en": "Angola",
     "name_ar": "أنجولا",
     "dialCode": "+244",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/ao.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/ao.jpg",
     "id": "AO"
   },
   {
     "name_en": "Antarctica",
     "name_ar": "القطب الجنوبي",
     "dialCode": "+672",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/aq.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/aq.jpg",
     "id": "AQ"
   },
   {
     "name_en": "Argentina",
     "name_ar": "الأرجنتين",
     "dialCode": "+54",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/ar.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/ar.jpg",
     "id": "AR"
   },
   {
     "name_en": "AmericanSamoa",
     "name_ar": "ساموا الأمريكية",
     "dialCode": "+1684",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/as.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/as.jpg",
     "id": "AS"
   },
   {
     "name_en": "Austria",
     "name_ar": "النمسا",
     "dialCode": "+43",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/at.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/at.jpg",
     "id": "AT"
   },
   {
     "name_en": "Australia",
     "name_ar": "أستراليا",
     "dialCode": "+61",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/au.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/au.jpg",
     "id": "AU"
   },
   {
     "name_en": "Aruba",
     "name_ar": "آروبا",
     "dialCode": "+297",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/aw.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/aw.jpg",
     "id": "AW"
   },
   {
     "name_en": "Aland Islands",
     "name_ar": "جزر أولان",
     "dialCode": "+358",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/ax.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/ax.jpg",
     "id": "AX"
   },
   {
     "name_en": "Azerbaijan",
     "name_ar": "أذربيجان",
     "dialCode": "+994",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/az.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/az.jpg",
     "id": "AZ"
   },
   {
     "name_en": "Bosnia and Herzegovina",
     "name_ar": "البوسنة والهرسك",
     "dialCode": "+387",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/ba.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/ba.jpg",
     "id": "BA"
   },
   {
     "name_en": "Barbados",
     "name_ar": "بربادوس",
     "dialCode": "+1246",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/bb.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/bb.jpg",
     "id": "BB"
   },
   {
     "name_en": "Bangladesh",
     "name_ar": "بنجلاديش",
     "dialCode": "+880",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/bd.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/bd.jpg",
     "id": "BD"
   },
   {
     "name_en": "Belgium",
     "name_ar": "بلجيكا",
     "dialCode": "+32",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/be.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/be.jpg",
     "id": "BE"
   },
   {
     "name_en": "Burkina Faso",
     "name_ar": "بوركينا فاسو",
     "dialCode": "+226",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/bf.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/bf.jpg",
     "id": "BF"
   },
   {
     "name_en": "Bulgaria",
     "name_ar": "بلغاريا",
     "dialCode": "+359",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/bg.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/bg.jpg",
     "id": "BG"
   },
   {
     "name_en": "Bahrain",
     "name_ar": "البحرين",
     "dialCode": "+973",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/bh.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/bh.jpg",
     "id": "BH"
   },
   {
     "name_en": "Burundi",
     "name_ar": "بوروندي",
     "dialCode": "+257",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/bi.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/bi.jpg",
     "id": "BI"
   },
   {
     "name_en": "Benin",
     "name_ar": "بنين",
     "dialCode": "+229",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/bj.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/bj.jpg",
     "id": "BJ"
   },
   {
     "name_en": "Saint Barthelemy",
     "name_ar": "سان بارتيلمي",
     "dialCode": "+590",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/bl.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/bl.jpg",
     "id": "BL"
   },
   {
     "name_en": "Bermuda",
     "name_ar": "برمودا",
     "dialCode": "+1441",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/bm.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/bm.jpg",
     "id": "BM"
   },
   {
     "name_en": "Brunei Darussalam",
     "name_ar": "بروناي",
     "dialCode": "+673",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/bn.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/bn.jpg",
     "id": "BN"
   },
   {
     "name_en": "Bolivia",
     "name_ar": "بوليفيا",
     "dialCode": "+591",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/bo.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/bo.jpg",
     "id": "BO"
   },
   {
     "name_en": "Brazil",
     "name_ar": "البرازيل",
     "dialCode": "+55",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/br.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/br.jpg",
     "id": "BR"
   },
   {
     "name_en": "Bahamas",
     "name_ar": "الباهاما",
     "dialCode": "+1242",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/bs.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/bs.jpg",
     "id": "BS"
   },
   {
     "name_en": "Bhutan",
     "name_ar": "بوتان",
     "dialCode": "+975",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/bt.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/bt.jpg",
     "id": "BT"
   },
   {
     "name_en": "Botswana",
     "name_ar": "بتسوانا",
     "dialCode": "+267",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/bw.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/bw.jpg",
     "id": "BW"
   },
   {
     "name_en": "Belarus",
     "name_ar": "روسيا البيضاء",
     "dialCode": "+375",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/by.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/by.jpg",
     "id": "BY"
   },
   {
     "name_en": "Belize",
     "name_ar": "بليز",
     "dialCode": "+501",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/bz.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/bz.jpg",
     "id": "BZ"
   },
   {
     "name_en": "Canada",
     "name_ar": "كندا",
     "dialCode": "+1",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/ca.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/ca.jpg",
     "id": "CA"
   },
   {
     "name_en": "Cocos (Keeling) Islands",
     "name_ar": "جزر كوكوس",
     "dialCode": "+61",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/cc.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/cc.jpg",
     "id": "CC"
   },
   {
     "name_en": "Democratic Republic of the Congo",
     "name_ar": "جمهورية الكونغو الديمقراطية",
     "dialCode": "+243",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/cd.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/cd.jpg",
     "id": "CD"
   },
   {
     "name_en": "Central African Republic",
     "name_ar": "جمهورية افريقيا الوسطى",
     "dialCode": "+236",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/cf.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/cf.jpg",
     "id": "CF"
   },
   {
     "name_en": "Congo",
     "name_ar": "الكونغو - برازافيل",
     "dialCode": "+242",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/cg.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/cg.jpg",
     "id": "CG"
   },
   {
     "name_en": "Switzerland",
     "name_ar": "سويسرا",
     "dialCode": "+41",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/ch.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/ch.jpg",
     "id": "CH"
   },
   {
     "name_en": "Ivory Coast / Cote d'Ivoire",
     "name_ar": "ساحل العاج",
     "dialCode": "+225",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/ci.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/ci.jpg",
     "id": "CI"
   },
   {
     "name_en": "Cook Islands",
     "name_ar": "جزر كوك",
     "dialCode": "+682",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/ck.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/ck.jpg",
     "id": "CK"
   },
   {
     "name_en": "Chile",
     "name_ar": "شيلي",
     "dialCode": "+56",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/cl.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/cl.jpg",
     "id": "CL"
   },
   {
     "name_en": "Cameroon",
     "name_ar": "الكاميرون",
     "dialCode": "+237",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/cm.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/cm.jpg",
     "id": "CM"
   },
   {
     "name_en": "China",
     "name_ar": "الصين",
     "dialCode": "+86",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/cn.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/cn.jpg",
     "id": "CN"
   },
   {
     "name_en": "Colombia",
     "name_ar": "كولومبيا",
     "dialCode": "+57",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/co.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/co.jpg",
     "id": "CO"
   },
   {
     "name_en": "Costa Rica",
     "name_ar": "كوستاريكا",
     "dialCode": "+506",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/cr.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/cr.jpg",
     "id": "CR"
   },
   {
     "name_en": "Cuba",
     "name_ar": "كوبا",
     "dialCode": "+53",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/cu.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/cu.jpg",
     "id": "CU"
   },
   {
     "name_en": "Cape Verde",
     "name_ar": "الرأس الأخضر",
     "dialCode": "+238",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/cv.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/cv.jpg",
     "id": "CV"
   },
   {
     "name_en": "Christmas Island",
     "name_ar": "جزيرة الكريسماس",
     "dialCode": "+61",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/cx.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/cx.jpg",
     "id": "CX"
   },
   {
     "name_en": "Cyprus",
     "name_ar": "قبرص",
     "dialCode": "+357",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/cy.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/cy.jpg",
     "id": "CY"
   },
   {
     "name_en": "Czech Republic",
     "name_ar": "جمهورية التشيك",
     "dialCode": "+420",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/cz.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/cz.jpg",
     "id": "CZ"
   },
   {
     "name_en": "Germany",
     "name_ar": "ألمانيا",
     "dialCode": "+49",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/de.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/de.jpg",
     "id": "DE"
   },
   {
     "name_en": "Djibouti",
     "name_ar": "جيبوتي",
     "dialCode": "+253",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/dj.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/dj.jpg",
     "id": "DJ"
   },
   {
     "name_en": "Denmark",
     "name_ar": "الدانمرك",
     "dialCode": "+45",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/dk.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/dk.jpg",
     "id": "DK"
   },
   {
     "name_en": "Dominica",
     "name_ar": "دومينيكا",
     "dialCode": "+1767",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/dm.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/dm.jpg",
     "id": "DM"
   },
   {
     "name_en": "Dominican Republic",
     "name_ar": "جمهورية الدومينيك",
     "dialCode": "+1849",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/do.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/do.jpg",
     "id": "DO"
   },
   {
     "name_en": "Algeria",
     "name_ar": "الجزائر",
     "dialCode": "+213",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/dz.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/dz.jpg",
     "id": "DZ"
   },
   {
     "name_en": "Ecuador",
     "name_ar": "الاكوادور",
     "dialCode": "+593",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/ec.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/ec.jpg",
     "id": "EC"
   },
   {
     "name_en": "Estonia",
     "name_ar": "استونيا",
     "dialCode": "+372",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/ee.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/ee.jpg",
     "id": "EE"
   },
   {
     "name_en": "Egypt",
     "name_ar": "مصر",
     "dialCode": "+20",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/eg.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/eg.jpg",
     "id": "EG"
   },
   {
     "name_en": "Eritrea",
     "name_ar": "اريتريا",
     "dialCode": "+291",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/er.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/er.jpg",
     "id": "ER"
   },
   {
     "name_en": "Spain",
     "name_ar": "أسبانيا",
     "dialCode": "+34",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/es.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/es.jpg",
     "id": "ES"
   },
   {
     "name_en": "Ethiopia",
     "name_ar": "اثيوبيا",
     "dialCode": "+251",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/et.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/et.jpg",
     "id": "ET"
   },
   {
     "name_en": "Finland",
     "name_ar": "فنلندا",
     "dialCode": "+358",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/fi.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/fi.jpg",
     "id": "FI"
   },
   {
     "name_en": "Fiji",
     "name_ar": "فيجي",
     "dialCode": "+679",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/fj.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/fj.jpg",
     "id": "FJ"
   },
   {
     "name_en": "Falkland Islands (Malvinas)",
     "name_ar": "جزر فوكلاند",
     "dialCode": "+500",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/fk.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/fk.jpg",
     "id": "FK"
   },
   {
     "name_en": "Micronesia, Federated States of Micronesia",
     "name_ar": "ميكرونيزيا",
     "dialCode": "+691",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/fm.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/fm.jpg",
     "id": "FM"
   },
   {
     "name_en": "Faroe Islands",
     "name_ar": "جزر فارو",
     "dialCode": "+298",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/fo.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/fo.jpg",
     "id": "FO"
   },
   {
     "name_en": "France",
     "name_ar": "فرنسا",
     "dialCode": "+33",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/fr.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/fr.jpg",
     "id": "FR"
   },
   {
     "name_en": "Gabon",
     "name_ar": "الجابون",
     "dialCode": "+241",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/ga.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/ga.jpg",
     "id": "GA"
   },
   {
     "name_en": "United Kingdom",
     "name_ar": "المملكة المتحدة",
     "dialCode": "+44",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/gb.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/gb.jpg",
     "id": "GB"
   },
   {
     "name_en": "Grenada",
     "name_ar": "جرينادا",
     "dialCode": "+1473",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/gd.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/gd.jpg",
     "id": "GD"
   },
   {
     "name_en": "Georgia",
     "name_ar": "جورجيا",
     "dialCode": "+995",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/ge.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/ge.jpg",
     "id": "GE"
   },
   {
     "name_en": "French Guiana",
     "name_ar": "غويانا",
     "dialCode": "+594",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/gf.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/gf.jpg",
     "id": "GF"
   },
   {
     "name_en": "Guernsey",
     "name_ar": "غيرنزي",
     "dialCode": "+44",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/gg.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/gg.jpg",
     "id": "GG"
   },
   {
     "name_en": "Ghana",
     "name_ar": "غانا",
     "dialCode": "+233",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/gh.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/gh.jpg",
     "id": "GH"
   },
   {
     "name_en": "Gibraltar",
     "name_ar": "جبل طارق",
     "dialCode": "+350",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/gi.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/gi.jpg",
     "id": "GI"
   },
   {
     "name_en": "Greenland",
     "name_ar": "جرينلاند",
     "dialCode": "+299",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/gl.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/gl.jpg",
     "id": "GL"
   },
   {
     "name_en": "Gambia",
     "name_ar": "غامبيا",
     "dialCode": "+220",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/gm.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/gm.jpg",
     "id": "GM"
   },
   {
     "name_en": "Guinea",
     "name_ar": "غينيا",
     "dialCode": "+224",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/gn.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/gn.jpg",
     "id": "GN"
   },
   {
     "name_en": "Guadeloupe",
     "name_ar": "جوادلوب",
     "dialCode": "+590",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/gp.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/gp.jpg",
     "id": "GP"
   },
   {
     "name_en": "Equatorial Guinea",
     "name_ar": "غينيا الاستوائية",
     "dialCode": "+240",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/gq.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/gq.jpg",
     "id": "GQ"
   },
   {
     "name_en": "Greece",
     "name_ar": "اليونان",
     "dialCode": "+30",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/gr.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/gr.jpg",
     "id": "GR"
   },
   {
     "name_en": "South Georgia and the South Sandwich Islands",
     "name_ar": "جورجيا الجنوبية وجزر ساندويتش الجنوبية",
     "dialCode": "+500",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/gs.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/gs.jpg",
     "id": "GS"
   },
   {
     "name_en": "Guatemala",
     "name_ar": "جواتيمالا",
     "dialCode": "+502",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/gt.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/gt.jpg",
     "id": "GT"
   },
   {
     "name_en": "Guam",
     "name_ar": "جوام",
     "dialCode": "+1671",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/gu.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/gu.jpg",
     "id": "GU"
   },
   {
     "name_en": "Guinea-Bissau",
     "name_ar": "غينيا بيساو",
     "dialCode": "+245",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/gw.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/gw.jpg",
     "id": "GW"
   },
   {
     "name_en": "Guyana",
     "name_ar": "غيانا",
     "dialCode": "+592",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/gy.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/gy.jpg",
     "id": "GY"
   },
   {
     "name_en": "Hong Kong",
     "name_ar": "هونج كونج الصينية",
     "dialCode": "+852",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/hk.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/hk.jpg",
     "id": "HK"
   },
   {
     "name_en": "Honduras",
     "name_ar": "هندوراس",
     "dialCode": "+504",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/hn.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/hn.jpg",
     "id": "HN"
   },
   {
     "name_en": "Croatia",
     "name_ar": "كرواتيا",
     "dialCode": "+385",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/hr.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/hr.jpg",
     "id": "HR"
   },
   {
     "name_en": "Haiti",
     "name_ar": "هايتي",
     "dialCode": "+509",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/ht.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/ht.jpg",
     "id": "HT"
   },
   {
     "name_en": "Hungary",
     "name_ar": "المجر",
     "dialCode": "+36",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/hu.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/hu.jpg",
     "id": "HU"
   },
   {
     "name_en": "Indonesia",
     "name_ar": "اندونيسيا",
     "dialCode": "+62",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/id.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/id.jpg",
     "id": "ID"
   },
   {
     "name_en": "Ireland",
     "name_ar": "أيرلندا",
     "dialCode": "+353",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/ie.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/ie.jpg",
     "id": "IE"
   },
   {
     "name_en": "Isle of Man",
     "name_ar": "جزيرة مان",
     "dialCode": "+44",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/im.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/im.jpg",
     "id": "IM"
   },
   {
     "name_en": "India",
     "name_ar": "الهند",
     "dialCode": "+91",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/in.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/in.jpg",
     "id": "IN"
   },
   {
     "name_en": "British Indian Ocean Territory",
     "name_ar": "المحيط الهندي البريطاني",
     "dialCode": "+246",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/io.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/io.jpg",
     "id": "IO"
   },
   {
     "name_en": "Iraq",
     "name_ar": "العراق",
     "dialCode": "+964",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/iq.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/iq.jpg",
     "id": "IQ"
   },
   {
     "name_en": "Iran",
     "name_ar": "ايران",
     "dialCode": "+98",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/ir.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/ir.jpg",
     "id": "IR"
   },
   {
     "name_en": "Iceland",
     "name_ar": "أيسلندا",
     "dialCode": "+354",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/is.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/is.jpg",
     "id": "IS"
   },
   {
     "name_en": "Italy",
     "name_ar": "ايطاليا",
     "dialCode": "+39",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/it.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/it.jpg",
     "id": "IT"
   },
   {
     "name_en": "Jersey",
     "name_ar": "جيرسي",
     "dialCode": "+44",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/je.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/je.jpg",
     "id": "JE"
   },
   {
     "name_en": "Jamaica",
     "name_ar": "جامايكا",
     "dialCode": "+1876",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/jm.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/jm.jpg",
     "id": "JM"
   },
   {
     "name_en": "Jordan",
     "name_ar": "الأردن",
     "dialCode": "+962",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/jo.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/jo.jpg",
     "id": "JO"
   },
   {
     "name_en": "Japan",
     "name_ar": "اليابان",
     "dialCode": "+81",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/jp.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/jp.jpg",
     "id": "JP"
   },
   {
     "name_en": "Kenya",
     "name_ar": "كينيا",
     "dialCode": "+254",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/ke.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/ke.jpg",
     "id": "KE"
   },
   {
     "name_en": "Kyrgyzstan",
     "name_ar": "قرغيزستان",
     "dialCode": "+996",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/kg.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/kg.jpg",
     "id": "KG"
   },
   {
     "name_en": "Cambodia",
     "name_ar": "كمبوديا",
     "dialCode": "+855",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/kh.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/kh.jpg",
     "id": "KH"
   },
   {
     "name_en": "Kiribati",
     "name_ar": "كيريباتي",
     "dialCode": "+686",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/ki.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/ki.jpg",
     "id": "KI"
   },
   {
     "name_en": "Comoros",
     "name_ar": "جزر القمر",
     "dialCode": "+269",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/km.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/km.jpg",
     "id": "KM"
   },
   {
     "name_en": "Saint Kitts and Nevis",
     "name_ar": "سانت كيتس ونيفيس",
     "dialCode": "+1869",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/kn.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/kn.jpg",
     "id": "KN"
   },
   {
     "name_en": "Korea, Democratic People's Republic of Korea",
     "name_ar": "كوريا الشمالية",
     "dialCode": "+850",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/kp.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/kp.jpg",
     "id": "KP"
   },
   {
     "name_en": "Korea, Republic of South Korea",
     "name_ar": "كوريا الجنوبية",
     "dialCode": "+82",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/kr.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/kr.jpg",
     "id": "KR"
   },
   {
     "name_en": "Kuwait",
     "name_ar": "الكويت",
     "dialCode": "+965",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/kw.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/kw.jpg",
     "id": "KW"
   },
   {
     "name_en": "Cayman Islands",
     "name_ar": "جزر الكايمن",
     "dialCode": "+1345",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/ky.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/ky.jpg",
     "id": "KY"
   },
   {
     "name_en": "Kazakhstan",
     "name_ar": "كازاخستان",
     "dialCode": "+77",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/kz.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/kz.jpg",
     "id": "KZ"
   },
   {
     "name_en": "Laos",
     "name_ar": "لاوس",
     "dialCode": "+856",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/la.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/la.jpg",
     "id": "LA"
   },
   {
     "name_en": "Lebanon",
     "name_ar": "لبنان",
     "dialCode": "+961",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/lb.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/lb.jpg",
     "id": "LB"
   },
   {
     "name_en": "Saint Lucia",
     "name_ar": "سانت لوسيا",
     "dialCode": "+1758",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/lc.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/lc.jpg",
     "id": "LC"
   },
   {
     "name_en": "Liechtenstein",
     "name_ar": "ليختنشتاين",
     "dialCode": "+423",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/li.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/li.jpg",
     "id": "LI"
   },
   {
     "name_en": "Sri Lanka",
     "name_ar": "سريلانكا",
     "dialCode": "+94",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/lk.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/lk.jpg",
     "id": "LK"
   },
   {
     "name_en": "Liberia",
     "name_ar": "ليبيريا",
     "dialCode": "+231",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/lr.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/lr.jpg",
     "id": "LR"
   },
   {
     "name_en": "Lesotho",
     "name_ar": "ليسوتو",
     "dialCode": "+266",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/ls.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/ls.jpg",
     "id": "LS"
   },
   {
     "name_en": "Lithuania",
     "name_ar": "ليتوانيا",
     "dialCode": "+370",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/lt.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/lt.jpg",
     "id": "LT"
   },
   {
     "name_en": "Luxembourg",
     "name_ar": "لوكسمبورج",
     "dialCode": "+352",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/lu.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/lu.jpg",
     "id": "LU"
   },
   {
     "name_en": "Latvia",
     "name_ar": "لاتفيا",
     "dialCode": "+371",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/lv.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/lv.jpg",
     "id": "LV"
   },
   {
     "name_en": "Libya",
     "name_ar": "ليبيا",
     "dialCode": "+218",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/ly.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/ly.jpg",
     "id": "LY"
   },
   {
     "name_en": "Morocco",
     "name_ar": "المغرب",
     "dialCode": "+212",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/ma.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/ma.jpg",
     "id": "MA"
   },
   {
     "name_en": "Monaco",
     "name_ar": "موناكو",
     "dialCode": "+377",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/mc.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/mc.jpg",
     "id": "MC"
   },
   {
     "name_en": "Moldova",
     "name_ar": "مولدافيا",
     "dialCode": "+373",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/md.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/md.jpg",
     "id": "MD"
   },
   {
     "name_en": "Montenegro",
     "name_ar": "الجبل الأسود",
     "dialCode": "+382",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/me.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/me.jpg",
     "id": "ME"
   },
   {
     "name_en": "Saint Martin",
     "name_ar": "سانت مارتين",
     "dialCode": "+590",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/mf.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/mf.jpg",
     "id": "MF"
   },
   {
     "name_en": "Madagascar",
     "name_ar": "مدغشقر",
     "dialCode": "+261",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/mg.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/mg.jpg",
     "id": "MG"
   },
   {
     "name_en": "Marshall Islands",
     "name_ar": "جزر المارشال",
     "dialCode": "+692",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/mh.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/mh.jpg",
     "id": "MH"
   },
   {
     "name_en": "North Macedonia",
     "name_ar": "مقدونيا",
     "dialCode": "+389",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/mk.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/mk.jpg",
     "id": "MK"
   },
   {
     "name_en": "Mali",
     "name_ar": "مالي",
     "dialCode": "+223",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/ml.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/ml.jpg",
     "id": "ML"
   },
   {
     "name_en": "Myanmar",
     "name_ar": "ميانمار",
     "dialCode": "+95",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/mm.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/mm.jpg",
     "id": "MM"
   },
   {
     "name_en": "Mongolia",
     "name_ar": "منغوليا",
     "dialCode": "+976",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/mn.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/mn.jpg",
     "id": "MN"
   },
   {
     "name_en": "Macau",
     "name_ar": "ماكاو الصينية",
     "dialCode": "+853",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/mo.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/mo.jpg",
     "id": "MO"
   },
   {
     "name_en": "Northern Mariana Islands",
     "name_ar": "جزر ماريانا الشمالية",
     "dialCode": "+1670",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/mp.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/mp.jpg",
     "id": "MP"
   },
   {
     "name_en": "Martinique",
     "name_ar": "مارتينيك",
     "dialCode": "+596",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/mq.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/mq.jpg",
     "id": "MQ"
   },
   {
     "name_en": "Mauritania",
     "name_ar": "موريتانيا",
     "dialCode": "+222",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/mr.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/mr.jpg",
     "id": "MR"
   },
   {
     "name_en": "Montserrat",
     "name_ar": "مونتسرات",
     "dialCode": "+1664",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/ms.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/ms.jpg",
     "id": "MS"
   },
   {
     "name_en": "Malta",
     "name_ar": "مالطا",
     "dialCode": "+356",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/mt.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/mt.jpg",
     "id": "MT"
   },
   {
     "name_en": "Mauritius",
     "name_ar": "موريشيوس",
     "dialCode": "+230",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/mu.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/mu.jpg",
     "id": "MU"
   },
   {
     "name_en": "Maldives",
     "name_ar": "جزر الملديف",
     "dialCode": "+960",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/mv.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/mv.jpg",
     "id": "MV"
   },
   {
     "name_en": "Malawi",
     "name_ar": "ملاوي",
     "dialCode": "+265",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/mw.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/mw.jpg",
     "id": "MW"
   },
   {
     "name_en": "Mexico",
     "name_ar": "المكسيك",
     "dialCode": "+52",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/mx.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/mx.jpg",
     "id": "MX"
   },
   {
     "name_en": "Malaysia",
     "name_ar": "ماليزيا",
     "dialCode": "+60",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/my.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/my.jpg",
     "id": "MY"
   },
   {
     "name_en": "Mozambique",
     "name_ar": "موزمبيق",
     "dialCode": "+258",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/mz.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/mz.jpg",
     "id": "MZ"
   },
   {
     "name_en": "Namibia",
     "name_ar": "ناميبيا",
     "dialCode": "+264",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/na.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/na.jpg",
     "id": "NA"
   },
   {
     "name_en": "New Caledonia",
     "name_ar": "كاليدونيا الجديدة",
     "dialCode": "+687",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/nc.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/nc.jpg",
     "id": "NC"
   },
   {
     "name_en": "Niger",
     "name_ar": "النيجر",
     "dialCode": "+227",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/ne.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/ne.jpg",
     "id": "NE"
   },
   {
     "name_en": "Norfolk Island",
     "name_ar": "جزيرة نورفوك",
     "dialCode": "+672",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/nf.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/nf.jpg",
     "id": "NF"
   },
   {
     "name_en": "Nigeria",
     "name_ar": "نيجيريا",
     "dialCode": "+234",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/ng.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/ng.jpg",
     "id": "NG"
   },
   {
     "name_en": "Nicaragua",
     "name_ar": "نيكاراجوا",
     "dialCode": "+505",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/ni.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/ni.jpg",
     "id": "NI"
   },
   {
     "name_en": "Netherlands",
     "name_ar": "هولندا",
     "dialCode": "+31",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/nl.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/nl.jpg",
     "id": "NL"
   },
   {
     "name_en": "Norway",
     "name_ar": "النرويج",
     "dialCode": "+47",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/no.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/no.jpg",
     "id": "NO"
   },
   {
     "name_en": "Nepal",
     "name_ar": "نيبال",
     "dialCode": "+977",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/np.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/np.jpg",
     "id": "NP"
   },
   {
     "name_en": "Nauru",
     "name_ar": "نورو",
     "dialCode": "+674",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/nr.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/nr.jpg",
     "id": "NR"
   },
   {
     "name_en": "Niue",
     "name_ar": "نيوي",
     "dialCode": "+683",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/nu.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/nu.jpg",
     "id": "NU"
   },
   {
     "name_en": "New Zealand",
     "name_ar": "نيوزيلاندا",
     "dialCode": "+64",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/nz.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/nz.jpg",
     "id": "NZ"
   },
   {
     "name_en": "Oman",
     "name_ar": "عمان",
     "dialCode": "+968",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/om.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/om.jpg",
     "id": "OM"
   },
   {
     "name_en": "Panama",
     "name_ar": "بنما",
     "dialCode": "+507",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/pa.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/pa.jpg",
     "id": "PA"
   },
   {
     "name_en": "Peru",
     "name_ar": "بيرو",
     "dialCode": "+51",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/pe.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/pe.jpg",
     "id": "PE"
   },
   {
     "name_en": "French Polynesia",
     "name_ar": "بولينيزيا الفرنسية",
     "dialCode": "+689",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/pf.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/pf.jpg",
     "id": "PF"
   },
   {
     "name_en": "Papua New Guinea",
     "name_ar": "بابوا غينيا الجديدة",
     "dialCode": "+675",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/pg.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/pg.jpg",
     "id": "PG"
   },
   {
     "name_en": "Philippines",
     "name_ar": "الفيلبين",
     "dialCode": "+63",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/ph.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/ph.jpg",
     "id": "PH"
   },
   {
     "name_en": "Pakistan",
     "name_ar": "باكستان",
     "dialCode": "+92",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/pk.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/pk.jpg",
     "id": "PK"
   },
   {
     "name_en": "Poland",
     "name_ar": "بولندا",
     "dialCode": "+48",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/pl.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/pl.jpg",
     "id": "PL"
   },
   {
     "name_en": "Saint Pierre and Miquelon",
     "name_ar": "سانت بيير وميكولون",
     "dialCode": "+508",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/pm.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/pm.jpg",
     "id": "PM"
   },
   {
     "name_en": "Pitcairn",
     "name_ar": "بتكايرن",
     "dialCode": "+872",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/pn.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/pn.jpg",
     "id": "PN"
   },
   {
     "name_en": "Puerto Rico",
     "name_ar": "بورتوريكو",
     "dialCode": "+1939",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/pr.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/pr.jpg",
     "id": "PR"
   },
   {
     "name_en": "Palestine",
     "name_ar": "فلسطين",
     "dialCode": "+970",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/ps.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/ps.jpg",
     "id": "PS"
   },
   {
     "name_en": "Portugal",
     "name_ar": "البرتغال",
     "dialCode": "+351",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/pt.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/pt.jpg",
     "id": "PT"
   },
   {
     "name_en": "Palau",
     "name_ar": "بالاو",
     "dialCode": "+680",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/pw.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/pw.jpg",
     "id": "PW"
   },
   {
     "name_en": "Paraguay",
     "name_ar": "باراجواي",
     "dialCode": "+595",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/py.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/py.jpg",
     "id": "PY"
   },
   {
     "name_en": "Qatar",
     "name_ar": "قطر",
     "dialCode": "+974",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/qa.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/qa.jpg",
     "id": "QA"
   },
   {
     "name_en": "Reunion",
     "name_ar": "روينيون",
     "dialCode": "+262",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/re.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/re.jpg",
     "id": "RE"
   },
   {
     "name_en": "Romania",
     "name_ar": "رومانيا",
     "dialCode": "+40",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/ro.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/ro.jpg",
     "id": "RO"
   },
   {
     "name_en": "Serbia",
     "name_ar": "صربيا",
     "dialCode": "+381",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/rs.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/rs.jpg",
     "id": "RS"
   },
   {
     "name_en": "Russia",
     "name_ar": "روسيا",
     "dialCode": "+7",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/ru.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/ru.jpg",
     "id": "RU"
   },
   {
     "name_en": "Rwanda",
     "name_ar": "رواندا",
     "dialCode": "+250",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/rw.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/rw.jpg",
     "id": "RW"
   },
   {
     "name_en": "Saudi Arabia",
     "name_ar": "المملكة العربية السعودية",
     "dialCode": "+966",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/sa.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/sa.jpg",
     "id": "SA"
   },
   {
     "name_en": "Solomon Islands",
     "name_ar": "جزر سليمان",
     "dialCode": "+677",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/sb.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/sb.jpg",
     "id": "SB"
   },
   {
     "name_en": "Seychelles",
     "name_ar": "سيشل",
     "dialCode": "+248",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/sc.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/sc.jpg",
     "id": "SC"
   },
   {
     "name_en": "Sudan",
     "name_ar": "السودان",
     "dialCode": "+249",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/sd.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/sd.jpg",
     "id": "SD"
   },
   {
     "name_en": "Sweden",
     "name_ar": "السويد",
     "dialCode": "+46",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/se.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/se.jpg",
     "id": "SE"
   },
   {
     "name_en": "Singapore",
     "name_ar": "سنغافورة",
     "dialCode": "+65",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/sg.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/sg.jpg",
     "id": "SG"
   },
   {
     "name_en": "Saint Helena, Ascension and Tristan Da Cunha",
     "name_ar": "سانت هيلنا",
     "dialCode": "+290",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/sh.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/sh.jpg",
     "id": "SH"
   },
   {
     "name_en": "Slovenia",
     "name_ar": "سلوفينيا",
     "dialCode": "+386",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/si.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/si.jpg",
     "id": "SI"
   },
   {
     "name_en": "Svalbard and Jan Mayen",
     "name_ar": "سفالبارد وجان مايان",
     "dialCode": "+47",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/sj.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/sj.jpg",
     "id": "SJ"
   },
   {
     "name_en": "Slovakia",
     "name_ar": "سلوفاكيا",
     "dialCode": "+421",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/sk.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/sk.jpg",
     "id": "SK"
   },
   {
     "name_en": "Sierra Leone",
     "name_ar": "سيراليون",
     "dialCode": "+232",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/sl.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/sl.jpg",
     "id": "SL"
   },
   {
     "name_en": "San Marino",
     "name_ar": "سان مارينو",
     "dialCode": "+378",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/sm.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/sm.jpg",
     "id": "SM"
   },
   {
     "name_en": "Senegal",
     "name_ar": "السنغال",
     "dialCode": "+221",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/sn.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/sn.jpg",
     "id": "SN"
   },
   {
     "name_en": "Somalia",
     "name_ar": "الصومال",
     "dialCode": "+252",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/so.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/so.jpg",
     "id": "SO"
   },
   {
     "name_en": "Suriname",
     "name_ar": "سورينام",
     "dialCode": "+597",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/sr.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/sr.jpg",
     "id": "SR"
   },
   {
     "name_en": "South Sudan",
     "name_ar": "جنوب السودان",
     "dialCode": "+211",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/ss.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/ss.jpg",
     "id": "SS"
   },
   {
     "name_en": "Sao Tome and Principe",
     "name_ar": "ساو تومي وبرينسيبي",
     "dialCode": "+239",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/st.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/st.jpg",
     "id": "ST"
   },
   {
     "name_en": "El Salvador",
     "name_ar": "السلفادور",
     "dialCode": "+503",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/sv.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/sv.jpg",
     "id": "SV"
   },
   {
     "name_en": "Sint Maarten",
     "name_ar": "سينت مارتن",
     "dialCode": "+1721",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/sx.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/sx.jpg",
     "id": "SX"
   },
   {
     "name_en": "Syrian Arab Republic",
     "name_ar": "سوريا",
     "dialCode": "+963",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/sy.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/sy.jpg",
     "id": "SY"
   },
   {
     "name_en": "Eswatini",
     "name_ar": "سوازيلاند",
     "dialCode": "+268",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/sz.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/sz.jpg",
     "id": "SZ"
   },
   {
     "name_en": "Turks and Caicos Islands",
     "name_ar": "جزر الترك وجايكوس",
     "dialCode": "+1649",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/tc.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/tc.jpg",
     "id": "TC"
   },
   {
     "name_en": "Chad",
     "name_ar": "تشاد",
     "dialCode": "+235",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/td.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/td.jpg",
     "id": "TD"
   },
   {
     "name_en": "Togo",
     "name_ar": "توجو",
     "dialCode": "+228",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/tg.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/tg.jpg",
     "id": "TG"
   },
   {
     "name_en": "Thailand",
     "name_ar": "تايلند",
     "dialCode": "+66",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/th.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/th.jpg",
     "id": "TH"
   },
   {
     "name_en": "Tajikistan",
     "name_ar": "طاجكستان",
     "dialCode": "+992",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/tj.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/tj.jpg",
     "id": "TJ"
   },
   {
     "name_en": "Tokelau",
     "name_ar": "توكيلو",
     "dialCode": "+690",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/tk.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/tk.jpg",
     "id": "TK"
   },
   {
     "name_en": "Timor-Leste",
     "name_ar": "تيمور الشرقية",
     "dialCode": "+670",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/tl.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/tl.jpg",
     "id": "TL"
   },
   {
     "name_en": "Turkmenistan",
     "name_ar": "تركمانستان",
     "dialCode": "+993",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/tm.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/tm.jpg",
     "id": "TM"
   },
   {
     "name_en": "Tunisia",
     "name_ar": "تونس",
     "dialCode": "+216",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/tn.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/tn.jpg",
     "id": "TN"
   },
   {
     "name_en": "Tonga",
     "name_ar": "تونجا",
     "dialCode": "+676",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/to.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/to.jpg",
     "id": "TO"
   },
   {
     "name_en": "Turkey",
     "name_ar": "تركيا",
     "dialCode": "+90",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/tr.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/tr.jpg",
     "id": "TR"
   },
   {
     "name_en": "Trinidad and Tobago",
     "name_ar": "ترينيداد وتوباغو",
     "dialCode": "+1868",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/tt.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/tt.jpg",
     "id": "TT"
   },
   {
     "name_en": "Tuvalu",
     "name_ar": "توفالو",
     "dialCode": "+688",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/tv.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/tv.jpg",
     "id": "TV"
   },
   {
     "name_en": "Taiwan",
     "name_ar": "تايوان",
     "dialCode": "+886",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/tw.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/tw.jpg",
     "id": "TW"
   },
   {
     "name_en": "Tanzania, United Republic of Tanzania",
     "name_ar": "تانزانيا",
     "dialCode": "+255",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/tz.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/tz.jpg",
     "id": "TZ"
   },
   {
     "name_en": "Ukraine",
     "name_ar": "أوكرانيا",
     "dialCode": "+380",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/ua.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/ua.jpg",
     "id": "UA"
   },
   {
     "name_en": "Uganda",
     "name_ar": "أوغندا",
     "dialCode": "+256",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/ug.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/ug.jpg",
     "id": "UG"
   },
   {
     "name_en": "United States",
     "name_ar": "الولايات المتحدة الأمريكية",
     "dialCode": "+1",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/us.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/us.jpg",
     "id": "US"
   },
   {
     "name_en": "Uruguay",
     "name_ar": "أورجواي",
     "dialCode": "+598",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/uy.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/uy.jpg",
     "id": "UY"
   },
   {
     "name_en": "Uzbekistan",
     "name_ar": "أوزبكستان",
     "dialCode": "+998",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/uz.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/uz.jpg",
     "id": "UZ"
   },
   {
     "name_en": "Holy See (Vatican City State)",
     "name_ar": "الفاتيكان",
     "dialCode": "+379",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/va.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/va.jpg",
     "id": "VA"
   },
   {
     "name_en": "Saint Vincent and the Grenadines",
     "name_ar": "سانت فنسنت وغرنادين",
     "dialCode": "+1784",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/vc.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/vc.jpg",
     "id": "VC"
   },
   {
     "name_en": "Venezuela, Bolivarian Republic of Venezuela",
     "name_ar": "فنزويلا",
     "dialCode": "+58",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/ve.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/ve.jpg",
     "id": "VE"
   },
   {
     "name_en": "Virgin Islands, British",
     "name_ar": "جزر فرجين البريطانية",
     "dialCode": "+1284",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/vg.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/vg.jpg",
     "id": "VG"
   },
   {
     "name_en": "Virgin Islands, U.S.",
     "name_ar": "جزر فرجين الأمريكية",
     "dialCode": "+1340",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/vi.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/vi.jpg",
     "id": "VI"
   },
   {
     "name_en": "Vietnam",
     "name_ar": "فيتنام",
     "dialCode": "+84",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/vn.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/vn.jpg",
     "id": "VN"
   },
   {
     "name_en": "Vanuatu",
     "name_ar": "فانواتو",
     "dialCode": "+678",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/vu.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/vu.jpg",
     "id": "VU"
   },
   {
     "name_en": "Wallis and Futuna",
     "name_ar": "جزر والس وفوتونا",
     "dialCode": "+681",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/wf.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/wf.jpg",
     "id": "WF"
   },
   {
     "name_en": "Samoa",
     "name_ar": "ساموا",
     "dialCode": "+685",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/ws.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/ws.jpg",
     "id": "WS"
   },
   {
     "name_en": "Kosovo",
     "name_ar": "كوسوفو",
     "dialCode": "+383",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/xk.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/xk.jpg",
     "id": "XK"
   },
   {
     "name_en": "Yemen",
     "name_ar": "اليمن",
     "dialCode": "+967",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/ye.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/ye.jpg",
     "id": "YE"
   },
   {
     "name_en": "Mayotte",
     "name_ar": "مايوت",
     "dialCode": "+262",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/yt.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/yt.jpg",
     "id": "YT"
   },
   {
     "name_en": "South Africa",
     "name_ar": "جمهورية جنوب افريقيا",
     "dialCode": "+27",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/za.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/za.jpg",
     "id": "ZA"
   },
   {
     "name_en": "Zambia",
     "name_ar": "زامبيا",
     "dialCode": "+260",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/zm.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/zm.jpg",
     "id": "ZM"
   },
   {
     "name_en": "Zimbabwe",
     "name_ar": "زيمبابوي",
     "dialCode": "+263",
-    "flag": "packages/shewa_ui_kit/lib/assets/countries/flags/zw.jpg",
+    "flag": "packages/shewa_ui_kit/assets/countries/flags/zw.jpg",
     "id": "ZW"
   }
 ]
