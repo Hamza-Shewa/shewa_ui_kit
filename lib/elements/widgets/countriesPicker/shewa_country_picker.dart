@@ -9,8 +9,12 @@ class ShewaCountryPicker extends StatefulWidget {
   const ShewaCountryPicker({
     super.key,
     this.onTap,
+    this.shewaDropDownStyle,
+    this.widgetItem,
   });
-  final void Function(String)? onTap;
+  final void Function(Country)? onTap;
+  final Widget Function(Country)? widgetItem;
+  final ShewaDropDownStyle? shewaDropDownStyle;
   @override
   State<ShewaCountryPicker> createState() => _ShewaCountryPickerState();
 }
@@ -44,30 +48,33 @@ class _ShewaCountryPickerState extends State<ShewaCountryPicker> {
       controller: controller,
       centerDropDown: true,
       searchField: true,
-      shewaDropDownStyle: ShewaDropDownStyle(
-        prefix: true,
-        prefixSize: const Size(24, 24),
-      ),
+      shewaDropDownStyle: widget.shewaDropDownStyle ??
+          ShewaDropDownStyle(
+            prefix: true,
+            prefixSize: const Size(24, 24),
+          ),
       items: List<ShewaDropdownItem<Country>>.generate(
         countries.length,
         (index) => ShewaDropdownItem(
-          item: ListTile(
-            leading: SizedBox(
-              height: 20,
-              width: 20,
-              child: Image.asset(
-                countries[index].flag,
-                fit: BoxFit.cover,
-              ),
-            ),
-            title: Text(
-              countries[index].enName,
-              style: theme.textTheme.bodyText1,
-            ),
-          ),
+          item: widget.widgetItem != null
+              ? widget.widgetItem!(countries[index])
+              : ListTile(
+                  leading: SizedBox(
+                    height: 20,
+                    width: 20,
+                    child: Image.asset(
+                      countries[index].flag,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  title: Text(
+                    countries[index].enName,
+                    style: theme.textTheme.bodyText1,
+                  ),
+                ),
           onTap: () {
             if (widget.onTap != null) {
-              widget.onTap!(countries[index].enName);
+              widget.onTap!(countries[index]);
             }
           },
           value: countries[index],

@@ -172,22 +172,26 @@ class ShewaDropdownButtonState extends State<ShewaDropdownButton> {
           _focusNode.requestFocus();
         },
         child: Container(
-          decoration: BoxDecoration(
-            border: Border.all(
-              color: widget.shewaDropDownStyle?.mainFieldBorderColor ??
-                  Colors.grey,
-            ),
-            borderRadius: BorderRadius.circular(5),
-          ),
+          decoration: widget.shewaDropDownStyle?.fieldDecoration ??
+              BoxDecoration(
+                border: Border.all(
+                  color: widget.shewaDropDownStyle?.mainFieldBorderColor ??
+                      Colors.grey,
+                ),
+                borderRadius: BorderRadius.circular(5),
+              ),
           padding: widget.shewaDropDownStyle?.contentPadding ??
               const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
           child: Row(
             children: [
               if (widget.shewaDropDownStyle?.prefix ?? false)
-                SizedBox(
-                  width: widget.shewaDropDownStyle?.prefixSize?.width,
-                  height: widget.shewaDropDownStyle?.prefixSize?.height,
-                  child: prefix,
+                Container(
+                  margin: widget.shewaDropDownStyle?.mainFieldIconMargin,
+                  child: SizedBox(
+                    width: widget.shewaDropDownStyle?.prefixSize?.width,
+                    height: widget.shewaDropDownStyle?.prefixSize?.height,
+                    child: prefix,
+                  ),
                 ),
               const SizedBox(width: 8),
               Focus(
@@ -217,6 +221,8 @@ class ShewaDropDownStyle {
   final Size? prefixSize;
   final Color? mainFieldBorderColor;
   final EdgeInsetsGeometry contentPadding;
+  final BoxDecoration? fieldDecoration;
+  final EdgeInsetsGeometry? mainFieldIconMargin;
   ShewaDropDownStyle({
     this.mainFieldTextAlign,
     this.dropDownFieldTextAlign,
@@ -231,6 +237,8 @@ class ShewaDropDownStyle {
     this.mainFieldBorderColor,
     this.contentPadding =
         const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
+    this.fieldDecoration,
+    this.mainFieldIconMargin,
   });
 
   ShewaDropDownStyle copyWith({
