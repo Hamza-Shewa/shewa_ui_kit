@@ -67,7 +67,7 @@ class ShewaField extends StatelessWidget {
         obscureText: obscureText,
         validator: validator,
         textAlign: textAlign,
-        style: style ?? theme.textTheme.headline5,
+        style: style,
         onChanged: onChanged,
         controller: controller,
         decoration: InputDecoration(
@@ -81,13 +81,7 @@ class ShewaField extends StatelessWidget {
           labelText: label,
           suffixIcon: suffix,
           hintText: hint,
-          hintStyle: hintStyle ??
-              TextStyle(
-                color: theme.primaryColor,
-              ),
-          labelStyle: TextStyle(
-            color: theme.primaryColor,
-          ),
+          hintStyle: hintStyle,
           prefixIcon: prefix,
           isDense: false,
           enabledBorder: OutlineInputBorder(

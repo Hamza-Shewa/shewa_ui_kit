@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:shewa_ui_kit/elements/widgets/shewa_field.dart';
-import 'package:shewa_ui_kit/elements/widgets/shewa_flex_field.dart';
 import 'package:shewa_ui_kit/elements/widgets/storeDropdownButton/components/shewa_dropdown_controller.dart';
 import 'package:shewa_ui_kit/elements/widgets/storeDropdownButton/components/shewa_dropdown_item.dart';
 
@@ -171,6 +170,8 @@ class ShewaDropdownButtonState extends State<ShewaDropdownButton> {
           _focusNode.requestFocus();
         },
         child: Container(
+          height: widget.shewaDropDownStyle?.mainFieldHeight,
+          width: widget.shewaDropDownStyle?.mainFieldWidth,
           decoration: widget.shewaDropDownStyle?.fieldDecoration ??
               BoxDecoration(
                 border: Border.all(
@@ -184,7 +185,7 @@ class ShewaDropdownButtonState extends State<ShewaDropdownButton> {
           child: Row(
             children: [
               if (_controller.text.isNotEmpty &&
-                  (widget.shewaDropDownStyle?.prefix ?? false))
+                  (widget.shewaDropDownStyle?.prefix ?? false)) ...[
                 Container(
                   margin: widget.shewaDropDownStyle?.mainFieldIconMargin,
                   child: SizedBox(
@@ -193,7 +194,8 @@ class ShewaDropdownButtonState extends State<ShewaDropdownButton> {
                     child: prefix,
                   ),
                 ),
-              const SizedBox(width: 8),
+                const SizedBox(width: 8),
+              ],
               Focus(
                 focusNode: _focusNode,
                 child: _controller.text.isNotEmpty

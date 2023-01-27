@@ -43,7 +43,6 @@ class _ShewaCountryPickerState extends State<ShewaCountryPicker> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
     return ShewaDropdownButton(
       controller: controller,
       centerDropDown: true,
