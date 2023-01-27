@@ -19,31 +19,32 @@ class ShewaField extends StatelessWidget {
       this.maxLines = 1,
       this.width = 250,
       this.height,
-      this.align = TextAlign.start,
+      this.textAlign = TextAlign.start,
       this.focusNode,
+      this.contentPadding = const EdgeInsets.all(0),
       Key? key})
       : super(key: key);
 
   final Function(String)? onChanged;
   final Function(String)? onSubmit;
   final Function()? onTap;
-  final TextAlign align;
+  final TextAlign textAlign;
   final TextEditingController controller;
   final FocusNode? focusNode;
   final double? height;
   final String hint;
   final String label;
-  final EdgeInsets margin;
+  final EdgeInsetsGeometry margin;
   final int maxLines;
   final bool obscureText;
-  final EdgeInsets padding;
+  final EdgeInsetsGeometry padding;
   final Widget? prefix;
   final bool readOnly;
   final Widget? suffix;
   final TextInputType textInputType;
   final String? Function(String?) validator;
   final double width;
-
+  final EdgeInsetsGeometry contentPadding;
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -61,11 +62,12 @@ class ShewaField extends StatelessWidget {
         readOnly: readOnly,
         obscureText: obscureText,
         validator: validator,
-        textAlign: align,
-        style: Theme.of(context).textTheme.headline5,
+        textAlign: textAlign,
+        style: theme.textTheme.headline5,
         onChanged: onChanged,
         controller: controller,
         decoration: InputDecoration(
+          contentPadding: contentPadding,
           constraints: const BoxConstraints(
             minWidth: 0.0,
             maxWidth: double.infinity,
@@ -81,7 +83,7 @@ class ShewaField extends StatelessWidget {
           labelStyle: TextStyle(
             color: theme.primaryColor,
           ),
-          prefix: prefix,
+          prefixIcon: prefix,
           isDense: false,
           enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(

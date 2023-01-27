@@ -25,8 +25,8 @@ class ShewaIconButton extends StatelessWidget {
   final double width;
   final double height;
   final TextStyle? textStyle;
-  final EdgeInsets padding;
-  final EdgeInsets margin;
+  final EdgeInsetsGeometry padding;
+  final EdgeInsetsGeometry margin;
   final BorderRadiusGeometry borderRadius;
   final bool isRounded;
   final bool shadow;

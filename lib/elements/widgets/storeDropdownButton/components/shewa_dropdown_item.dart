@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 class ShewaDropdownItem<T> {
-  Widget title;
+  Widget item;
   VoidCallback onTap;
   T value;
 
   ShewaDropdownItem({
-    required this.title,
+    required this.item,
     required this.onTap,
     required this.value,
   });

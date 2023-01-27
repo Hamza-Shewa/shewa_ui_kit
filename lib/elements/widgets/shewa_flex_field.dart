@@ -20,6 +20,7 @@ class ShewaFlexField extends StatelessWidget {
       this.maxLines = 1,
       this.width = 250,
       this.focusNode,
+      this.textAlign,
       Key? key})
       : super(key: key);
 
@@ -34,13 +35,14 @@ class ShewaFlexField extends StatelessWidget {
   final String? Function(String?) validator;
   final int flex;
   final Widget? prefix;
-  final EdgeInsets padding;
+  final EdgeInsetsGeometry padding;
   final Function(String)? onSubmit;
   final Function()? onTap;
-  final EdgeInsets margin;
+  final EdgeInsetsGeometry margin;
   final int maxLines;
   final double width;
   final FocusNode? focusNode;
+  final TextAlign? textAlign;
   @override
   Widget build(BuildContext context) {
     return Flexible(
@@ -53,6 +55,7 @@ class ShewaFlexField extends StatelessWidget {
           focusNode: focusNode,
           maxLines: maxLines,
           onTap: onTap,
+          textAlign: textAlign ?? TextAlign.start,
           onFieldSubmitted: onSubmit,
           keyboardType: textInputType,
           readOnly: readOnly,

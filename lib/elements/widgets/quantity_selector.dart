@@ -16,7 +16,7 @@ class QuantitySelector extends StatefulWidget {
   final TextEditingController controller;
   final double width;
   final double height;
-  final EdgeInsets margin;
+  final EdgeInsetsGeometry margin;
   final VoidCallback onTap;
 
   @override
@@ -60,7 +60,7 @@ class _QuantitySelectorState extends State<QuantitySelector> {
               Expanded(
                 child: ShewaField(
                   height: widget.height,
-                  align: TextAlign.center,
+                  textAlign: TextAlign.center,
                   textInputType: TextInputType.number,
                   padding: const EdgeInsets.symmetric(horizontal: 8.0),
                   label: 'العدد',

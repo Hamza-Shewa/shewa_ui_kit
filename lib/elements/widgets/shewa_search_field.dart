@@ -33,9 +33,9 @@ class ShewaSearchField extends StatelessWidget {
   final Function(String)? onChanged;
   final int flex;
   final Widget? prefix;
-  final EdgeInsets padding;
+  final EdgeInsetsGeometry padding;
   final Function()? onTap;
-  final EdgeInsets margin;
+  final EdgeInsetsGeometry margin;
   final int maxLines;
   final double width;
   final String? Function(String?)? validator;

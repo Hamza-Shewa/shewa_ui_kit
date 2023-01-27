@@ -13,8 +13,8 @@ class ShewaChip extends StatelessWidget {
     this.ontap,
   }) : super(key: key);
   final String value;
-  final EdgeInsets padding;
-  final EdgeInsets margin;
+  final EdgeInsetsGeometry padding;
+  final EdgeInsetsGeometry margin;
   final Color? backgroundColor;
   final bool border;
   final Color? textColor;

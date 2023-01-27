@@ -24,10 +24,10 @@ class MyPasswordField extends StatefulWidget {
   final TextInputType textInputType;
   final Function(String)? onChanged;
   final String? Function(String?) validator;
-  final EdgeInsets padding;
+  final EdgeInsetsGeometry padding;
   final Function(String)? onSubmit;
   final Function()? onTap;
-  final EdgeInsets margin;
+  final EdgeInsetsGeometry margin;
   final double width;
   final double? height;
   final TextAlign align;
