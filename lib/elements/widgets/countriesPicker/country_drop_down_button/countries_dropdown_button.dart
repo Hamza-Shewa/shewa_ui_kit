@@ -1,30 +1,31 @@
 import 'package:flutter/material.dart';
 
 import 'package:shewa_ui_kit/elements/widgets/shewa_field.dart';
-import 'package:shewa_ui_kit/elements/widgets/storeDropdownButton/components/shewa_dropdown_controller.dart';
-import 'package:shewa_ui_kit/elements/widgets/storeDropdownButton/components/shewa_dropdown_item.dart';
 
+import '../shewa_country_picker.dart';
 
-class ShewaDropdownButton extends StatefulWidget {
-  const ShewaDropdownButton({
+class CountriesDropdownButton extends StatefulWidget {
+  const CountriesDropdownButton({
     Key? key,
     required this.items,
     this.onChanged,
     this.searchField = false,
+    this.initialValue,
     required this.controller,
     this.shewaDropDownStyle,
   }) : super(key: key);
-  final List<ShewaDropdownItem> items;
+  final List<CountriesDropDownItem<Country>> items;
   final Function(Object value)? onChanged;
+  final Country? initialValue;
   final bool searchField;
-  final ShewaDropDownController controller;
-  final ShewaDropDownStyle? shewaDropDownStyle;
+  final CountriesDropDownController controller;
+  final CountryDropDownStyle? shewaDropDownStyle;
 
   @override
-  ShewaDropdownButtonState createState() => ShewaDropdownButtonState();
+  CountriesDropdownButtonState createState() => CountriesDropdownButtonState();
 }
 
-class ShewaDropdownButtonState extends State<ShewaDropdownButton> {
+class CountriesDropdownButtonState extends State<CountriesDropdownButton> {
   final FocusNode _focusNode = FocusNode();
   final FocusNode _searchFocus = FocusNode();
   Widget? prefix;
@@ -47,8 +48,16 @@ class ShewaDropdownButtonState extends State<ShewaDropdownButton> {
     widget.controller.addListener(() {
       try {
         dispose();
-      } catch (e) {}
+      } catch (e) {
+        rethrow;
+      }
     });
+    if (widget.initialValue != null) {
+      _controller.text = widget.initialValue!.enName;
+      prefix = Image.asset(
+        widget.initialValue!.flag,
+      );
+    }
 
     if (widget.searchField) {
       _searchFocus.addListener(() {
@@ -71,7 +80,6 @@ class ShewaDropdownButtonState extends State<ShewaDropdownButton> {
         _overlayEntry!.remove();
       }
     });
-    
     super.initState();
   }
 
@@ -80,79 +88,97 @@ class ShewaDropdownButtonState extends State<ShewaDropdownButton> {
     search = '';
     RenderBox renderBox = context.findRenderObject() as RenderBox;
     var size = renderBox.size;
-    return OverlayEntry(
-      builder: (context) => Positioned(
-        width: size.width,
-        child: CompositedTransformFollower(
-          link: _layerLink,
-          showWhenUnlinked: false,
-          offset: Offset(
-            0,
-            size.height,
-          ),
-          child: ConstrainedBox(
-            constraints: const BoxConstraints(
-              minHeight: 50.0,
-              maxHeight: 250.0,
+    return OverlayEntry(builder: (context) {
+      bool isArabic = Localizations.localeOf(context).languageCode == 'ar';
+      return Directionality(
+        textDirection: isArabic ? TextDirection.rtl : TextDirection.ltr,
+        child: Positioned(
+          width: size.width,
+          child: CompositedTransformFollower(
+            link: _layerLink,
+            showWhenUnlinked: false,
+            offset: Offset(
+              0,
+              size.height,
             ),
-            child: Material(
-              elevation: 4.0,
-              child: StatefulBuilder(builder: (context, update) {
-                return Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    if (widget.searchField)
-                      ShewaField(
-                        width: double.infinity,
-                        focusNode: _searchFocus,
-                        label:
-                            widget.shewaDropDownStyle?.dropDownFieldlabel ?? '',
-                        hint:
-                            widget.shewaDropDownStyle?.dropDownFieldHint ?? '',
-                        hintStyle:
-                            widget.shewaDropDownStyle?.dtopDownHintTextStyle,
-                        style: widget.shewaDropDownStyle?.dropDownTextStyle,
-                        onChanged: (v) {
-                          search = v;
-                          update(() {});
-                        },
-                        controller: _searchController,
-                        validator: (v) => null,
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(
+                minHeight: 50.0,
+                maxHeight: 250.0,
+              ),
+              child: Material(
+                elevation: 4.0,
+                child: StatefulBuilder(builder: (context, update) {
+                  return Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      if (widget.searchField)
+                        ShewaField(
+                          margin: const EdgeInsets.symmetric(horizontal: 4),
+                          contentPadding: widget
+                                  .shewaDropDownStyle?.dropDownContentPadding ??
+                              const EdgeInsets.symmetric(
+                                  horizontal: 10, vertical: 4),
+                          width: double.infinity,
+                          focusNode: _searchFocus,
+                          label:
+                              widget.shewaDropDownStyle?.dropDownFieldlabel ??
+                                  '',
+                          hint: widget.shewaDropDownStyle?.dropDownFieldHint ??
+                              '',
+                          hintStyle:
+                              widget.shewaDropDownStyle?.dtopDownHintTextStyle,
+                          style: widget.shewaDropDownStyle?.dropDownTextStyle,
+                          onChanged: (v) {
+                            search = v;
+                            update(() {});
+                          },
+                          controller: _searchController,
+                          validator: (v) => null,
+                        ),
+                      Flexible(
+                        child: ListView(
+                          padding: EdgeInsets.zero,
+                          shrinkWrap: true,
+                          children: [
+                            for (CountriesDropDownItem<Country> item
+                                in widget.items)
+                              if (item.value.enName
+                                      .toLowerCase()
+                                      .contains(search.toLowerCase()) ||
+                                  item.value.arName
+                                      .toLowerCase()
+                                      .contains(search.toLowerCase()) ||
+                                  item.value.dialCode
+                                      .toLowerCase()
+                                      .contains(search.toLowerCase()))
+                                InkWell(
+                                  onTap: () {
+                                    prefix = Image.asset(item.value.flag);
+                                    _controller.text = isArabic
+                                        ? item.value.arName.toString()
+                                        : item.value.enName.toString();
+                                    widget.onChanged?.call(_controller.text);
+                                    item.onTap();
+                                    _searchFocus.unfocus();
+                                    _focusNode.unfocus();
+                                    update(() {});
+                                    setState(() {});
+                                  },
+                                  child: item.item,
+                                ),
+                          ],
+                        ),
                       ),
-                    Flexible(
-                      child: ListView(
-                        padding: EdgeInsets.zero,
-                        shrinkWrap: true,
-                        children: [
-                          for (ShewaDropdownItem item in widget.items)
-                            if (item.value.enName
-                                .toLowerCase()
-                                .contains(search.toLowerCase()))
-                              InkWell(
-                                onTap: () {
-                                  prefix = Image.asset(item.value.flag);
-                                  _controller.text =
-                                      item.value.enName.toString();
-                                  widget.onChanged?.call(_controller.text);
-                                  item.onTap();
-                                  _searchFocus.unfocus();
-                                  _focusNode.unfocus();
-                                  update(() {});
-                                  setState(() {});
-                                },
-                                child: item.item,
-                              ),
-                        ],
-                      ),
-                    ),
-                  ],
-                );
-              }),
+                    ],
+                  );
+                }),
+              ),
             ),
           ),
         ),
-      ),
-    );
+      );
+    });
   }
 
   @override
@@ -220,7 +246,7 @@ class ShewaDropdownButtonState extends State<ShewaDropdownButton> {
   }
 }
 
-class ShewaDropDownStyle {
+class CountryDropDownStyle {
   final TextAlign? mainFieldTextAlign;
   final TextAlign? dropDownFieldTextAlign;
   final String? mainFieldHint;
@@ -233,6 +259,7 @@ class ShewaDropDownStyle {
   final Size? prefixSize;
   final Color? mainFieldBorderColor;
   final EdgeInsetsGeometry contentPadding;
+  final EdgeInsetsGeometry dropDownContentPadding;
   final BoxDecoration? fieldDecoration;
   final EdgeInsetsGeometry? mainFieldIconMargin;
   final TextStyle? mainTextStyle;
@@ -240,7 +267,7 @@ class ShewaDropDownStyle {
   final TextStyle? dropDownTextStyle;
   final TextStyle? dtopDownHintTextStyle;
 
-  ShewaDropDownStyle({
+  CountryDropDownStyle({
     this.mainFieldTextAlign,
     this.dropDownFieldTextAlign,
     this.mainFieldHint,
@@ -254,6 +281,8 @@ class ShewaDropDownStyle {
     this.mainFieldBorderColor,
     this.contentPadding =
         const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
+    this.dropDownContentPadding =
+        const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
     this.fieldDecoration,
     this.mainFieldIconMargin,
     this.mainHintTextStyle,
@@ -262,7 +291,7 @@ class ShewaDropDownStyle {
     this.mainTextStyle,
   });
 
-  ShewaDropDownStyle copyWith({
+  CountryDropDownStyle copyWith({
     TextAlign? mainFieldTextAlign,
     TextAlign? dropDownFieldTextAlign,
     String? mainFieldHint,
@@ -270,7 +299,7 @@ class ShewaDropDownStyle {
     String? dropDownFieldlabel,
     String? dropDownFieldHint,
   }) {
-    return ShewaDropDownStyle(
+    return CountryDropDownStyle(
       mainFieldTextAlign: mainFieldTextAlign ?? this.mainFieldTextAlign,
       dropDownFieldTextAlign:
           dropDownFieldTextAlign ?? this.dropDownFieldTextAlign,
@@ -283,14 +312,14 @@ class ShewaDropDownStyle {
 
   @override
   String toString() {
-    return 'ShewaDropDownStyle(mainFieldTextAlign: $mainFieldTextAlign, dropDownFieldTextAlign: $dropDownFieldTextAlign, mainFieldHint: $mainFieldHint, mainFieldlabel: $mainFieldlabel, dropDownFieldlabel: $dropDownFieldlabel, dropDownFieldHint: $dropDownFieldHint)';
+    return 'CountryDropDownStyle(mainFieldTextAlign: $mainFieldTextAlign, dropDownFieldTextAlign: $dropDownFieldTextAlign, mainFieldHint: $mainFieldHint, mainFieldlabel: $mainFieldlabel, dropDownFieldlabel: $dropDownFieldlabel, dropDownFieldHint: $dropDownFieldHint)';
   }
 
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
 
-    return other is ShewaDropDownStyle &&
+    return other is CountryDropDownStyle &&
         other.mainFieldTextAlign == mainFieldTextAlign &&
         other.dropDownFieldTextAlign == dropDownFieldTextAlign &&
         other.mainFieldHint == mainFieldHint &&

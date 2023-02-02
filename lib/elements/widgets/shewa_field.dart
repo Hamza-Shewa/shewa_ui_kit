@@ -24,6 +24,7 @@ class ShewaField extends StatelessWidget {
     this.contentPadding = const EdgeInsets.all(0),
     this.style,
     this.hintStyle,
+    this.inputBorder,
     Key? key,
   }) : super(key: key);
 
@@ -49,6 +50,7 @@ class ShewaField extends StatelessWidget {
   final EdgeInsetsGeometry contentPadding;
   final TextStyle? style;
   final TextStyle? hintStyle;
+  final InputBorder? inputBorder;
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -84,23 +86,21 @@ class ShewaField extends StatelessWidget {
           hintStyle: hintStyle,
           prefixIcon: prefix,
           isDense: false,
-          enabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(
-              color: Colors.grey.shade300,
-              width: 1,
-            ),
-            borderRadius: BorderRadius.circular(10),
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(
-              color: theme.primaryColor,
-              width: 1,
-            ),
-            borderRadius: BorderRadius.circular(10),
-          ),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10),
-          ),
+          enabledBorder: inputBorder ??
+              UnderlineInputBorder(
+                borderSide: BorderSide(
+                  color: Colors.grey.shade300,
+                  width: 1,
+                ),
+              ),
+          focusedBorder: inputBorder ??
+              UnderlineInputBorder(
+                borderSide: BorderSide(
+                  color: theme.primaryColor,
+                  width: 2,
+                ),
+              ),
+          border: inputBorder,
           focusColor: theme.primaryColor,
         ).applyDefaults(
           Theme.of(context).inputDecorationTheme,
