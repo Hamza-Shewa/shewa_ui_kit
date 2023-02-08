@@ -27,7 +27,7 @@ class ShewaOutLinedButton extends StatelessWidget {
   final Widget? icon;
   final Color? hoverColor;
   final Color? color;
-  final double width;
+  final double? width;
   final double height;
   final String text;
   final TextStyle? textStyle;
@@ -132,7 +132,7 @@ class ShewaOutLinedButton extends StatelessWidget {
               return Colors.transparent;
             },
           ),
-          minimumSize: MaterialStateProperty.all(Size.fromHeight(height)),
+          minimumSize: MaterialStateProperty.all(Size(width ?? 150, height)),
           backgroundColor: MaterialStateProperty.resolveWith(
             (states) {
               return Colors.transparent;

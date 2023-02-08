@@ -137,7 +137,7 @@ class ShewaButton extends StatelessWidget {
               return Colors.transparent;
             },
           ),
-          minimumSize: MaterialStateProperty.all(Size.fromHeight(height)),
+          minimumSize: MaterialStateProperty.all(Size(width ?? 150, height)),
           backgroundColor: MaterialStateProperty.resolveWith((states) {
             return color ?? theme.primaryColor;
           }),
