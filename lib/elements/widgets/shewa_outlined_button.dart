@@ -62,7 +62,6 @@ class ShewaOutLinedButton extends StatelessWidget {
     if (text.isNotEmpty) {
       children.add(
         Flexible(
-          fit: FlexFit.tight,
           child: Text(
             text,
             style: textStyle ??

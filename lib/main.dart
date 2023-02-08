@@ -115,6 +115,24 @@ class _HomeState extends State<Home> {
               },
             ),
             ShewaButton(
+              width: double.infinity,
+              margin: EdgeInsets.symmetric(vertical: 20),
+              onPressed: () {},
+              color: Colors.red,
+              hoverColor: Colors.red,
+              leading: Container(
+                margin: const EdgeInsetsDirectional.only(end: 5),
+                child: const Icon(
+                  Icons.social_distance_outlined,
+                  color: Colors.white,
+                ),
+              ),
+              text: "Google",
+              textStyle: const TextStyle(
+                color: Colors.white,
+              ),
+            ),
+            ShewaButton(
               textOnly: true,
               onPressed: () {
                 Navigator.of(context).push(
