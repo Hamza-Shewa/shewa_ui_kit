@@ -108,10 +108,10 @@ class ShewaButton extends StatelessWidget {
                 color: borderColor!,
               ),
       ),
-      child: ElevatedButton(
+      child: TextButton(
         onPressed: onPressed,
         onLongPress: onLongPress,
-        style: theme.elevatedButtonTheme.style?.copyWith(
+        style: theme.textButtonTheme.style?.copyWith(
           elevation: MaterialStatePropertyAll(elevation),
           shape: MaterialStateProperty.all(
             RoundedRectangleBorder(

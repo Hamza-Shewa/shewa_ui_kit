@@ -104,10 +104,10 @@ class ShewaOutLinedButton extends StatelessWidget {
           color: color ?? theme.primaryColor,
         ),
       ),
-      child: ElevatedButton(
+      child: TextButton(
         onPressed: onPressed,
         onLongPress: onLongPress,
-        style: theme.elevatedButtonTheme.style?.copyWith(
+        style: theme.textButtonTheme.style?.copyWith(
           shape: MaterialStateProperty.all(
             RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(radius),
