@@ -98,13 +98,12 @@ class ShewaIconButton extends StatelessWidget {
               ]
             : null,
       ),
-      child: ElevatedButton(
+      child: TextButton(
         onPressed: onPressed,
-        style: Theme.of(context).elevatedButtonTheme.style == null
+        style: Theme.of(context).textButtonTheme.style == null
             ? theme.style
-            : Theme.of(context).elevatedButtonTheme.style!.copyWith(
+            : Theme.of(context).textButtonTheme.style!.copyWith(
                   padding: const MaterialStatePropertyAll(EdgeInsets.zero),
-                  elevation: MaterialStatePropertyAll(elevation),
                   shadowColor: MaterialStateProperty.all(Colors.black),
                   tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                   minimumSize: MaterialStateProperty.all(Size(width, height)),
