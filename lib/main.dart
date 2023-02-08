@@ -102,13 +102,12 @@ class _HomeState extends State<Home> {
           ),
         ),
         body: Column(
-          // crossAxisAlignment: CrossAxisAlignment.stretch,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ShewaCountryPicker(
               shewaDropDownStyle: CountryDropDownStyle(
                 prefix: true,
                 dropDownFieldHint: 'اختر الدولة',
-                
               ),
               initialValue: 'libya',
               onTap: (coountry) {
@@ -116,6 +115,7 @@ class _HomeState extends State<Home> {
               },
             ),
             ShewaButton(
+              textOnly: true,
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
@@ -123,6 +123,7 @@ class _HomeState extends State<Home> {
                       body: Column(
                         children: [
                           ShewaButton(
+                            width: 100,
                             onPressed: () {
                               Navigator.pop(context);
                             },

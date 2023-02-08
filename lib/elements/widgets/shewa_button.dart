@@ -5,6 +5,7 @@ class ShewaButton extends StatelessWidget {
     Key? key,
     required this.onPressed,
     required this.text,
+    this.onLongPress,
     this.icon,
     this.width = 150,
     this.height = 50,
@@ -17,13 +18,16 @@ class ShewaButton extends StatelessWidget {
     this.borderColor,
     this.expandedText = false,
     this.radius = 5,
+    this.textOnly = false,
+    this.elevation = 0,
   }) : super(key: key);
 
   final Function()? onPressed;
+  final Function()? onLongPress;
   final Widget? icon;
   final Color? hoverColor;
   final Color? color;
-  final double width;
+  final double? width;
   final double height;
   final String text;
   final TextStyle? textStyle;
@@ -33,11 +37,13 @@ class ShewaButton extends StatelessWidget {
   final Color? borderColor;
   final bool expandedText;
   final double radius;
-
+  final bool textOnly;
+  final double elevation;
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     List<Widget> children = [];
+
     if (expandedText) {
       if (leading != null) {
         children.add(
@@ -57,6 +63,7 @@ class ShewaButton extends StatelessWidget {
     if (text.isNotEmpty) {
       children.add(
         Flexible(
+          fit: FlexFit.tight,
           child: Text(
             text,
             style: textStyle ??
@@ -79,15 +86,18 @@ class ShewaButton extends StatelessWidget {
           ),
         );
       } else {
-        children.add(const SizedBox(width: 50));
+        if (!textOnly) {
+          children.add(const SizedBox(width: 50));
+        }
       }
     } else {
       if (icon != null) {
         children.add(icon!);
       }
     }
+
     return Container(
-      width: width,
+      width: textOnly ? null : width,
       height: height,
       padding: padding,
       margin: margin,
@@ -99,9 +109,11 @@ class ShewaButton extends StatelessWidget {
                 color: borderColor!,
               ),
       ),
-      child: TextButton(
+      child: ElevatedButton(
         onPressed: onPressed,
-        style: theme.textButtonTheme.style?.copyWith(
+        onLongPress: onLongPress,
+        style: theme.elevatedButtonTheme.style?.copyWith(
+          elevation: MaterialStatePropertyAll(elevation),
           shape: MaterialStateProperty.all(
             RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(radius),
@@ -126,20 +138,31 @@ class ShewaButton extends StatelessWidget {
               return Colors.transparent;
             },
           ),
-          minimumSize: MaterialStateProperty.all(Size(width, height)),
+          minimumSize: MaterialStateProperty.all(Size.fromHeight(height)),
           backgroundColor: MaterialStateProperty.resolveWith((states) {
             return color ?? theme.primaryColor;
           }),
         ),
-        child: Row(
-          mainAxisAlignment: children.length == 1
-              ? MainAxisAlignment.center
-              : expandedText
-                  ? MainAxisAlignment.spaceBetween
-                  : MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: children,
-        ),
+        child: textOnly
+            ? Text(
+                text,
+                style: textStyle ??
+                    theme.textTheme.headline6?.copyWith(
+                      color: color == Colors.transparent
+                          ? theme.primaryColorDark
+                          : theme.primaryColorLight,
+                    ),
+                textAlign: TextAlign.center,
+              )
+            : Row(
+                mainAxisAlignment: children.length == 1
+                    ? MainAxisAlignment.center
+                    : expandedText
+                        ? MainAxisAlignment.spaceBetween
+                        : MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: children,
+              ),
       ),
     );
   }

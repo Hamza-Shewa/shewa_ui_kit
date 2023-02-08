@@ -16,6 +16,7 @@ class ShewaIconButton extends StatelessWidget {
     this.isRounded = false,
     this.shadow = false,
     this.tooltip,
+    this.elevation = 0,
   }) : super(key: key);
 
   final Function()? onPressed;
@@ -31,7 +32,7 @@ class ShewaIconButton extends StatelessWidget {
   final bool isRounded;
   final bool shadow;
   final String? tooltip;
-
+  final double elevation;
   @override
   Widget build(BuildContext context) {
     TextButtonThemeData theme = TextButtonThemeData(
@@ -97,11 +98,13 @@ class ShewaIconButton extends StatelessWidget {
               ]
             : null,
       ),
-      child: TextButton(
+      child: ElevatedButton(
         onPressed: onPressed,
-        style: Theme.of(context).textButtonTheme.style == null
+        style: Theme.of(context).elevatedButtonTheme.style == null
             ? theme.style
-            : Theme.of(context).textButtonTheme.style!.copyWith(
+            : Theme.of(context).elevatedButtonTheme.style!.copyWith(
+                  padding: const MaterialStatePropertyAll(EdgeInsets.zero),
+                  elevation: MaterialStatePropertyAll(elevation),
                   shadowColor: MaterialStateProperty.all(Colors.black),
                   tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                   minimumSize: MaterialStateProperty.all(Size(width, height)),
