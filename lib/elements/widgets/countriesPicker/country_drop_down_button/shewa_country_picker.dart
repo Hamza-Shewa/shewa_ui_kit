@@ -8,11 +8,13 @@ class ShewaCountryPicker extends StatefulWidget {
     this.shewaDropDownStyle,
     this.widgetItem,
     this.initialValue,
+    this.readyOnly = false,
   });
   final void Function(Country)? onTap;
   final Widget Function(Country)? widgetItem;
   final CountryDropDownStyle? shewaDropDownStyle;
   final String? initialValue;
+  final bool readyOnly;
   @override
   State<ShewaCountryPicker> createState() => _ShewaCountryPickerState();
 }
@@ -58,6 +60,7 @@ class _ShewaCountryPickerState extends State<ShewaCountryPicker> {
       return CountriesDropdownButton(
         controller: controller,
         searchField: true,
+        readyOnly: widget.readyOnly,
         initialValue: initialValue,
         shewaDropDownStyle: widget.shewaDropDownStyle ??
             CountryDropDownStyle(
@@ -67,6 +70,7 @@ class _ShewaCountryPickerState extends State<ShewaCountryPicker> {
         items: List<CountriesDropDownItem<Country>>.generate(
           countries.length,
           (index) => CountriesDropDownItem(
+            
             item: widget.widgetItem != null
                 ? widget.widgetItem!(countries[index])
                 : ListTile(

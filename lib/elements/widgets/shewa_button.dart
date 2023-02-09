@@ -20,6 +20,7 @@ class ShewaButton extends StatelessWidget {
     this.radius = 5,
     this.textOnly = false,
     this.elevation = 0,
+    this.duration,
   }) : super(key: key);
 
   final Function()? onPressed;
@@ -39,6 +40,7 @@ class ShewaButton extends StatelessWidget {
   final double radius;
   final bool textOnly;
   final double elevation;
+  final Duration? duration;
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -112,6 +114,7 @@ class ShewaButton extends StatelessWidget {
         onPressed: onPressed,
         onLongPress: onLongPress,
         style: theme.textButtonTheme.style?.copyWith(
+          animationDuration: duration,
           elevation: MaterialStatePropertyAll(elevation),
           shape: MaterialStateProperty.all(
             RoundedRectangleBorder(
