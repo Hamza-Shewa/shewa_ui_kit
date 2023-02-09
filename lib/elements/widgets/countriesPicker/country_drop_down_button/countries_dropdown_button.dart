@@ -200,8 +200,9 @@ class CountriesDropdownButtonState extends State<CountriesDropdownButton> {
             decoration: widget.shewaDropDownStyle?.fieldDecoration ??
                 BoxDecoration(
                   border: Border.all(
-                    color: widget.shewaDropDownStyle?.mainFieldBorderColor ??
-                        Colors.grey,
+                    color: widget.shewaDropDownStyle == null
+                        ? Colors.grey
+                        : widget.shewaDropDownStyle!.mainFieldBorderColor,
                   ),
                   borderRadius: BorderRadius.circular(5),
                 ),
@@ -260,7 +261,7 @@ class CountryDropDownStyle {
   final double? mainFieldHeight;
   final bool prefix;
   final Size? prefixSize;
-  final Color? mainFieldBorderColor;
+  final Color mainFieldBorderColor;
   final EdgeInsetsGeometry contentPadding;
   final EdgeInsetsGeometry dropDownContentPadding;
   final BoxDecoration? fieldDecoration;
@@ -281,7 +282,7 @@ class CountryDropDownStyle {
     this.mainFieldHeight = 40,
     this.prefix = false,
     this.prefixSize = const Size(40, 30),
-    this.mainFieldBorderColor,
+    this.mainFieldBorderColor = Colors.grey,
     this.contentPadding =
         const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
     this.dropDownContentPadding =
