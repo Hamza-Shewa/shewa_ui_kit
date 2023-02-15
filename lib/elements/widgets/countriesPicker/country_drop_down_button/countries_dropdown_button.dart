@@ -228,14 +228,14 @@ class CountriesDropdownButtonState extends State<CountriesDropdownButton> {
                   ),
                 ],
                 _controller.text.isNotEmpty
-                    ? Flexible(
+                    ? Expanded(
                         child: Text(
                           _controller.text,
                           style: widget.shewaDropDownStyle?.mainTextStyle,
                           overflow: TextOverflow.ellipsis,
                         ),
                       )
-                    : Flexible(
+                    : Expanded(
                         child: Text(
                           widget.shewaDropDownStyle?.mainFieldHint ?? '',
                           style: widget.shewaDropDownStyle?.mainHintTextStyle,
