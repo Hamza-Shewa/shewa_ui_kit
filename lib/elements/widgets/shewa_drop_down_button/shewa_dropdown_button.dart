@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'package:shewa_ui_kit/elements/widgets/shewa_field.dart';
-import 'package:shewa_ui_kit/elements/widgets/storeDropdownButton/components/shewa_dropdown_controller.dart';
-import 'package:shewa_ui_kit/elements/widgets/storeDropdownButton/components/shewa_dropdown_item.dart';
-
+import 'package:shewa_ui_kit/elements/widgets/shewa_drop_down_button/components/shewa_dropdown_controller.dart';
+import 'package:shewa_ui_kit/elements/widgets/shewa_drop_down_button/components/shewa_dropdown_item.dart';
 
 class ShewaDropdownButton extends StatefulWidget {
   const ShewaDropdownButton({
@@ -27,7 +26,6 @@ class ShewaDropdownButton extends StatefulWidget {
 class ShewaDropdownButtonState extends State<ShewaDropdownButton> {
   final FocusNode _focusNode = FocusNode();
   final FocusNode _searchFocus = FocusNode();
-  Widget? prefix;
   OverlayEntry? _overlayEntry;
   final LayerLink _layerLink = LayerLink();
   final TextEditingController _controller = TextEditingController(),
@@ -44,11 +42,11 @@ class ShewaDropdownButtonState extends State<ShewaDropdownButton> {
 
   @override
   void initState() {
-    widget.controller.addListener(() {
-      try {
-        dispose();
-      } catch (e) {}
-    });
+    // widget.controller.addListener(() {
+    //   try {
+    //     dispose();
+    //   } catch (e) {}
+    // });
 
     if (widget.searchField) {
       _searchFocus.addListener(() {
@@ -71,7 +69,7 @@ class ShewaDropdownButtonState extends State<ShewaDropdownButton> {
         _overlayEntry!.remove();
       }
     });
-    
+
     super.initState();
   }
 
@@ -125,14 +123,13 @@ class ShewaDropdownButtonState extends State<ShewaDropdownButton> {
                         shrinkWrap: true,
                         children: [
                           for (ShewaDropdownItem item in widget.items)
-                            if (item.value.enName
+                            if (item.value
                                 .toLowerCase()
                                 .contains(search.toLowerCase()))
                               InkWell(
                                 onTap: () {
-                                  prefix = Image.asset(item.value.flag);
-                                  _controller.text =
-                                      item.value.enName.toString();
+                                  
+                                  _controller.text = item.value.toString();
                                   widget.onChanged?.call(_controller.text);
                                   item.onTap();
                                   _searchFocus.unfocus();
@@ -178,41 +175,20 @@ class ShewaDropdownButtonState extends State<ShewaDropdownButton> {
                 ),
             padding: widget.shewaDropDownStyle?.contentPadding ??
                 const EdgeInsets.symmetric(horizontal: 8),
-            child: Row(
-              children: [
-                if (_controller.text.isNotEmpty &&
-                    (widget.shewaDropDownStyle?.prefix ?? false)) ...[
-                  Container(
-                    margin: widget.shewaDropDownStyle?.mainFieldIconMargin ??
-                        const EdgeInsetsDirectional.only(end: 8),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(5),
-                      child: SizedBox(
-                        width:
-                            widget.shewaDropDownStyle?.prefixSize?.width ?? 40,
-                        height:
-                            widget.shewaDropDownStyle?.prefixSize?.height ?? 30,
-                        child: prefix,
-                      ),
+            child: _controller.text.isNotEmpty
+                ? Flexible(
+                    child: Text(
+                      _controller.text,
+                      style: widget.shewaDropDownStyle?.mainTextStyle,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  )
+                : Flexible(
+                    child: Text(
+                      widget.shewaDropDownStyle?.mainFieldHint ?? '',
+                      style: widget.shewaDropDownStyle?.mainHintTextStyle,
                     ),
                   ),
-                ],
-                _controller.text.isNotEmpty
-                    ? Flexible(
-                        child: Text(
-                          _controller.text,
-                          style: widget.shewaDropDownStyle?.mainTextStyle,
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                      )
-                    : Flexible(
-                        child: Text(
-                          widget.shewaDropDownStyle?.mainFieldHint ?? '',
-                          style: widget.shewaDropDownStyle?.mainHintTextStyle,
-                        ),
-                      )
-              ],
-            ),
           ),
         ),
       ),

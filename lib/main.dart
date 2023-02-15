@@ -105,7 +105,7 @@ class _HomeState extends State<Home> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ShewaCountryPicker(
-              readyOnly: true,
+              readyOnly: false,
               shewaDropDownStyle: CountryDropDownStyle(
                 prefix: true,
                 dropDownFieldHint: 'اختر الدولة',
@@ -154,7 +154,8 @@ class _HomeState extends State<Home> {
               ),
             ),
             ShewaButton(
-              textOnly: true,
+              textOnly: false,
+              width: double.infinity,
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
