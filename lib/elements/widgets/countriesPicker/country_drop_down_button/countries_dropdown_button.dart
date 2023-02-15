@@ -240,7 +240,21 @@ class CountriesDropdownButtonState extends State<CountriesDropdownButton> {
                           widget.shewaDropDownStyle?.mainFieldHint ?? '',
                           style: widget.shewaDropDownStyle?.mainHintTextStyle,
                         ),
-                      )
+                      ),
+                if (widget.shewaDropDownStyle?.showIcon ?? true)
+                  if (widget.shewaDropDownStyle?.icon != null)
+                    widget.shewaDropDownStyle!.icon!(_focusNode)
+                  else
+                    Padding(
+                      padding: widget.shewaDropDownStyle?.mainFieldIconMargin ??
+                          const EdgeInsets.only(left: 8),
+                      child: Icon(
+                        _focusNode.hasFocus
+                            ? Icons.keyboard_arrow_up
+                            : Icons.keyboard_arrow_down,
+                        color: Colors.grey,
+                      ),
+                    ),
               ],
             ),
           ),
@@ -270,7 +284,8 @@ class CountryDropDownStyle {
   final TextStyle? mainHintTextStyle;
   final TextStyle? dropDownTextStyle;
   final TextStyle? dtopDownHintTextStyle;
-
+  final bool showIcon;
+  final Widget Function(FocusNode)? icon;
   CountryDropDownStyle({
     this.mainFieldTextAlign,
     this.dropDownFieldTextAlign,
@@ -280,6 +295,8 @@ class CountryDropDownStyle {
     this.dropDownFieldHint,
     this.mainFieldWidth = 200,
     this.mainFieldHeight = 40,
+    this.showIcon = false,
+    this.icon,
     this.prefix = false,
     this.prefixSize = const Size(40, 30),
     this.mainFieldBorderColor = Colors.grey,
