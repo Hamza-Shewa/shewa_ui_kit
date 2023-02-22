@@ -13,7 +13,7 @@ class ShewaIconButton extends StatelessWidget {
     this.padding = const EdgeInsets.all(0),
     this.margin = const EdgeInsets.all(0),
     this.borderRadius = const BorderRadius.all(Radius.circular(5)),
-    this.isRounded = false,
+    this.isRounded = true,
     this.shadow = false,
     this.tooltip,
     this.elevation = 0,
@@ -80,6 +80,7 @@ class ShewaIconButton extends StatelessWidget {
       ),
     );
     return Container(
+      key: key,
       alignment: Alignment.center,
       padding: padding,
       margin: margin,

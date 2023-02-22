@@ -98,6 +98,7 @@ class ShewaButton extends StatelessWidget {
     }
 
     return Container(
+      key: key,
       width: textOnly ? null : width,
       height: height,
       padding: padding,
