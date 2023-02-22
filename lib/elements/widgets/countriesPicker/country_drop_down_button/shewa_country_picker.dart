@@ -60,7 +60,7 @@ class _ShewaCountryPickerState extends State<ShewaCountryPicker> {
       return CountriesDropdownButton(
         controller: controller,
         searchField: true,
-        readyOnly: widget.readyOnly,
+        enabled: widget.readyOnly,
         initialValue: initialValue,
         shewaDropDownStyle: widget.shewaDropDownStyle ??
             CountryDropDownStyle(

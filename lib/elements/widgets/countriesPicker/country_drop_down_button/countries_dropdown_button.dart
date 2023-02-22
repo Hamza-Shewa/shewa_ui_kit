@@ -13,13 +13,13 @@ class CountriesDropdownButton extends StatefulWidget {
     this.initialValue,
     required this.controller,
     this.shewaDropDownStyle,
-    this.readyOnly = false,
+    this.enabled = false,
   }) : super(key: key);
   final List<CountriesDropDownItem<Country>> items;
   final Function(Object value)? onChanged;
   final Country? initialValue;
   final bool searchField;
-  final bool readyOnly;
+  final bool enabled;
   final CountriesDropDownController controller;
   final CountryDropDownStyle? shewaDropDownStyle;
 
@@ -191,8 +191,9 @@ class CountriesDropdownButtonState extends State<CountriesDropdownButton> {
         focusNode: _focusNode,
         child: InkWell(
           onTap: () {
-            if (widget.readyOnly) return;
-            _focusNode.requestFocus();
+            if (widget.enabled) {
+              _focusNode.requestFocus();
+            }
           },
           child: Container(
             height: widget.shewaDropDownStyle?.mainFieldHeight,

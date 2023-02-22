@@ -5,21 +5,23 @@ import 'package:shewa_ui_kit/elements/widgets/shewa_drop_down_button/components/
 import 'package:shewa_ui_kit/elements/widgets/shewa_drop_down_button/components/shewa_dropdown_item.dart';
 
 class ShewaDropdownButton<T> extends StatefulWidget {
-  const ShewaDropdownButton({
-    Key? key,
-    required this.items,
-    this.onChanged,
-    this.searchField = false,
-    required this.controller,
-    this.shewaDropDownStyle,
-    this.initialValue,
-  }) : super(key: key);
+  const ShewaDropdownButton(
+      {Key? key,
+      required this.items,
+      this.onChanged,
+      this.searchField = false,
+      required this.controller,
+      this.shewaDropDownStyle,
+      this.initialValue,
+      this.enabled = true})
+      : super(key: key);
   final List<ShewaDropdownItem> items;
   final Function(Object value)? onChanged;
   final bool searchField;
   final ShewaDropDownController controller;
   final ShewaDropDownStyle? shewaDropDownStyle;
   final T? initialValue;
+  final bool enabled;
   @override
   ShewaDropdownButtonState createState() => ShewaDropdownButtonState();
 }
@@ -162,7 +164,9 @@ class ShewaDropdownButtonState extends State<ShewaDropdownButton> {
         focusNode: _focusNode,
         child: InkWell(
           onTap: () {
-            _focusNode.requestFocus();
+            if (widget.enabled) {
+              _focusNode.requestFocus();
+            }
           },
           child: Container(
             height: widget.shewaDropDownStyle?.mainFieldHeight,
@@ -225,7 +229,7 @@ class ShewaDropDownStyle {
   final String? dropDownFieldHint;
   final double? mainFieldWidth;
   final double? mainFieldHeight;
- 
+
   final Size? prefixSize;
   final Color? mainFieldBorderColor;
   final EdgeInsetsGeometry contentPadding;
@@ -235,7 +239,7 @@ class ShewaDropDownStyle {
   final TextStyle? mainHintTextStyle;
   final TextStyle? dropDownTextStyle;
   final TextStyle? dtopDownHintTextStyle;
-   final bool showIcon;
+  final bool showIcon;
   final Widget Function(FocusNode)? icon;
   ShewaDropDownStyle({
     this.mainFieldTextAlign,
