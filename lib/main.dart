@@ -105,7 +105,7 @@ class _HomeState extends State<Home> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ShewaCountryPicker(
-              readyOnly: false,
+              enabled: false,
               shewaDropDownStyle: CountryDropDownStyle(
                 prefix: true,
                 dropDownFieldHint: 'اختر الدولة',

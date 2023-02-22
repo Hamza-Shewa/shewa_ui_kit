@@ -8,13 +8,13 @@ class ShewaCountryPicker extends StatefulWidget {
     this.shewaDropDownStyle,
     this.widgetItem,
     this.initialValue,
-    this.readyOnly = false,
+    this.enabled = true,
   });
   final void Function(Country)? onTap;
   final Widget Function(Country)? widgetItem;
   final CountryDropDownStyle? shewaDropDownStyle;
   final String? initialValue;
-  final bool readyOnly;
+  final bool enabled;
   @override
   State<ShewaCountryPicker> createState() => _ShewaCountryPickerState();
 }
@@ -60,7 +60,7 @@ class _ShewaCountryPickerState extends State<ShewaCountryPicker> {
       return CountriesDropdownButton(
         controller: controller,
         searchField: true,
-        enabled: widget.readyOnly,
+        enabled: widget.enabled,
         initialValue: initialValue,
         shewaDropDownStyle: widget.shewaDropDownStyle ??
             CountryDropDownStyle(
