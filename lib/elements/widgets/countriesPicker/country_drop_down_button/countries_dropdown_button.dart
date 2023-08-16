@@ -140,37 +140,39 @@ class CountriesDropdownButtonState extends State<CountriesDropdownButton> {
                         ),
                       Flexible(
                         child: ListView(
-                          padding: EdgeInsets.zero,
-                          shrinkWrap: true,
-                          children: [
-                            for (CountriesDropDownItem<Country> item
-                                in widget.items)
-                              if (item.value.enName
-                                      .toLowerCase()
-                                      .contains(search.toLowerCase()) ||
-                                  item.value.arName
-                                      .toLowerCase()
-                                      .contains(search.toLowerCase()) ||
-                                  item.value.dialCode
-                                      .toLowerCase()
-                                      .contains(search.toLowerCase()))
-                                InkWell(
-                                  onTap: () {
-                                    prefix = Image.asset(item.value.flag);
-                                    _controller.text = isArabic
-                                        ? item.value.arName.toString()
-                                        : item.value.enName.toString();
-                                    widget.onChanged?.call(_controller.text);
-                                    item.onTap();
-                                    _searchFocus.unfocus();
-                                    _focusNode.unfocus();
-                                    update(() {});
-                                    setState(() {});
-                                  },
-                                  child: item.item,
-                                ),
-                          ],
-                        ),
+                            padding: EdgeInsets.zero,
+                            shrinkWrap: true,
+                            children: List.generate(
+                                widget.items
+                                    .where((item) =>
+                                        item.value.enName
+                                            .toLowerCase()
+                                            .contains(search.toLowerCase()) ||
+                                        item.value.arName
+                                            .toLowerCase()
+                                            .contains(search.toLowerCase()) ||
+                                        item.value.dialCode
+                                            .toLowerCase()
+                                            .contains(search.toLowerCase()))
+                                    .length, (index) {
+                              CountriesDropDownItem<Country> item =
+                                  widget.items[index];
+                              return InkWell(
+                                onTap: () {
+                                  prefix = Image.asset(item.value.flag);
+                                  _controller.text = isArabic
+                                      ? item.value.arName.toString()
+                                      : item.value.enName.toString();
+                                  widget.onChanged?.call(_controller.text);
+                                  item.onTap();
+                                  _searchFocus.unfocus();
+                                  _focusNode.unfocus();
+                                  update(() {});
+                                  setState(() {});
+                                },
+                                child: item.item,
+                              );
+                            })),
                       ),
                     ],
                   );
