@@ -28,10 +28,14 @@ class _ShewaCountryPickerState extends State<ShewaCountryPicker> {
   Future fetchCountries() async {
     if (countries.isNotEmpty) return;
     countries = await countriesApi.getCountries();
-    if (widget.initialValue != null) {
+    if (widget.initialValue != null && widget.initialValue!.isNotEmpty) {
       initialValue = countries.firstWhere(
         (element) =>
-            element.enName.toLowerCase() == widget.initialValue!.toLowerCase(),
+            element.enName.toLowerCase() ==
+                widget.initialValue!.toLowerCase() ||
+            element.arName.toLowerCase() == widget.initialValue ||
+            element.dialCode.toLowerCase() ==
+                widget.initialValue!.toLowerCase(),
       );
     }
     loading = false;
@@ -70,7 +74,6 @@ class _ShewaCountryPickerState extends State<ShewaCountryPicker> {
         items: List<CountriesDropDownItem<Country>>.generate(
           countries.length,
           (index) => CountriesDropDownItem(
-            
             item: widget.widgetItem != null
                 ? widget.widgetItem!(countries[index])
                 : ListTile(
