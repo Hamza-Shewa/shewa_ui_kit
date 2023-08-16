@@ -140,24 +140,11 @@ class CountriesDropdownButtonState extends State<CountriesDropdownButton> {
                         ),
                       Flexible(
                         child: ListView(
-                            padding: EdgeInsets.zero,
-                            shrinkWrap: true,
-                            children: List.generate(
-                                widget.items
-                                    .where((item) =>
-                                        item.value.enName
-                                            .toLowerCase()
-                                            .contains(search.toLowerCase()) ||
-                                        item.value.arName
-                                            .toLowerCase()
-                                            .contains(search.toLowerCase()) ||
-                                        item.value.dialCode
-                                            .toLowerCase()
-                                            .contains(search.toLowerCase()))
-                                    .length, (index) {
-                              CountriesDropDownItem<Country> item =
-                                  widget.items[index];
-                              return InkWell(
+                          padding: EdgeInsets.zero,
+                          shrinkWrap: true,
+                          children: [
+                            for (CountriesDropDownItem<Country> item in items)
+                              InkWell(
                                 onTap: () {
                                   prefix = Image.asset(item.value.flag);
                                   _controller.text = isArabic
@@ -171,8 +158,9 @@ class CountriesDropdownButtonState extends State<CountriesDropdownButton> {
                                   setState(() {});
                                 },
                                 child: item.item,
-                              );
-                            })),
+                              ),
+                          ],
+                        ),
                       ),
                     ],
                   );
@@ -185,6 +173,12 @@ class CountriesDropdownButtonState extends State<CountriesDropdownButton> {
     });
   }
 
+  List<CountriesDropDownItem<Country>> get items => widget.items
+      .where((item) =>
+          item.value.enName.toLowerCase().contains(search.toLowerCase()) ||
+          item.value.arName.toLowerCase().contains(search.toLowerCase()) ||
+          item.value.dialCode.toLowerCase().contains(search.toLowerCase()))
+      .toList();
   @override
   Widget build(BuildContext context) {
     return CompositedTransformTarget(
