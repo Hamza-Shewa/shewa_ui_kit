@@ -63,7 +63,7 @@ class ShewaSearchField extends StatelessWidget {
               keyboardType: textInputType,
               readOnly: readOnly,
               obscureText: obscureText,
-              style: Theme.of(context).textTheme.bodyText1,
+              style: Theme.of(context).textTheme.bodyLarge,
               onChanged: onChanged,
               controller: controller,
               decoration: InputDecoration(
@@ -71,8 +71,8 @@ class ShewaSearchField extends StatelessWidget {
                 suffixIcon: suffix,
                 hintText: hint,
                 prefixIcon: prefix,
-                hintStyle: Theme.of(context).textTheme.bodyText1,
-                labelStyle: Theme.of(context).textTheme.bodyText1,
+                hintStyle: Theme.of(context).textTheme.bodyLarge,
+                labelStyle: Theme.of(context).textTheme.bodyLarge,
                 enabledBorder: OutlineInputBorder(
                   borderSide: BorderSide(
                     color: Colors.grey.shade300,

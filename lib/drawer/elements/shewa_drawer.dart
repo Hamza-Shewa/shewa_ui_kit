@@ -113,7 +113,7 @@ class ShewaDrawerState extends State<ShewaDrawer>
       child: SafeArea(
         child: AnimatedContainer(
           decoration: BoxDecoration(
-            color: widget.backgroundColor ?? Theme.of(context).backgroundColor,
+            color: widget.backgroundColor ?? Theme.of(context).colorScheme.background,
             borderRadius: widget.endDrawer == true
                 ? widget.textDirection == TextDirection.ltr
                     ? const BorderRadius.only(

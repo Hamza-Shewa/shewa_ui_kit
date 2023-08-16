@@ -54,7 +54,7 @@ class _MyPasswordFieldState extends State<MyPasswordField> {
         obscureText: obscureText,
         validator: widget.validator,
         textAlign: widget.align,
-        style: Theme.of(context).textTheme.headline5,
+        style: Theme.of(context).textTheme.headlineSmall,
         onChanged: widget.onChanged,
         controller: widget.controller,
         decoration: InputDecoration(

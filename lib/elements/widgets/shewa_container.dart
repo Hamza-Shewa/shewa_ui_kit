@@ -52,7 +52,7 @@ class ShewaContainer extends StatelessWidget {
                   )
                 ]
               : null,
-          color: backgroundColor ?? theme.backgroundColor,
+          color: backgroundColor ?? theme.colorScheme.background,
         ),
         child: child,
       ),

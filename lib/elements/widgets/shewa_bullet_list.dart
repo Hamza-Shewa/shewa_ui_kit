@@ -38,7 +38,7 @@ class ShewaBulletListItem extends StatelessWidget {
         children: <Widget>[
           Text(
             "\u2022 ",
-            style: theme.textTheme.bodyText1!.copyWith(
+            style: theme.textTheme.bodyLarge!.copyWith(
               fontSize: 20,
               fontWeight: FontWeight.bold,
             ),
@@ -49,7 +49,7 @@ class ShewaBulletListItem extends StatelessWidget {
           Expanded(
             child: Text(
               text,
-              style:  theme.textTheme.bodyText1!.copyWith(
+              style:  theme.textTheme.bodyLarge!.copyWith(
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
               ),

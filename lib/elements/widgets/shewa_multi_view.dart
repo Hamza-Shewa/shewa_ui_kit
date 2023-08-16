@@ -35,7 +35,7 @@ class _ShewaMultiViewState extends State<ShewaMultiView> {
           [
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
-              child: Text('عرض', style: Theme.of(context).textTheme.bodyText1),
+              child: Text('عرض', style: Theme.of(context).textTheme.bodyLarge),
             ),
             ShewaIconButton(
               onPressed: () {
@@ -105,7 +105,7 @@ class _ShewaMultiViewState extends State<ShewaMultiView> {
                   ShewaContainer(
                     child: Text(
                       'لا يوجد عناصر',
-                      style: Theme.of(context).textTheme.headline2,
+                      style: Theme.of(context).textTheme.displayMedium,
                       textAlign: TextAlign.center,
                       maxLines: 3,
                     ),

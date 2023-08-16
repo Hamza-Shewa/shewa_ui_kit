@@ -18,7 +18,7 @@ class ShewaAlerts {
         });
         return Dialog(
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
-          backgroundColor: Theme.of(context).backgroundColor,
+          backgroundColor: Theme.of(context).colorScheme.background,
           elevation: 0,
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
@@ -27,7 +27,7 @@ class ShewaAlerts {
             child: Center(
               child: Text(
                 message,
-                style: textStyle ?? Theme.of(context).textTheme.headline2,
+                style: textStyle ?? Theme.of(context).textTheme.displayMedium,
                 maxLines: 5,
               ),
             ),
@@ -51,7 +51,7 @@ class ShewaAlerts {
             child: CircularProgressIndicator(
               color: loadingColor ?? theme.primaryColor,
               strokeWidth: 4,
-              backgroundColor: backgroundColor ?? theme.backgroundColor,
+              backgroundColor: backgroundColor ?? theme.colorScheme.background,
             ),
           ),
         );
@@ -66,7 +66,7 @@ class ShewaAlerts {
       builder: (context) {
         return Dialog(
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
-          backgroundColor: Theme.of(context).backgroundColor,
+          backgroundColor: Theme.of(context).colorScheme.background,
           elevation: 0,
           child: Container(
             padding: const EdgeInsets.all(24.0),
@@ -85,7 +85,7 @@ class ShewaAlerts {
                   child: Text(
                     message,
                     textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.headline3!,
+                    style: Theme.of(context).textTheme.displaySmall!,
                     maxLines: 5,
                   ),
                 ),
@@ -153,7 +153,7 @@ class ShewaAlerts {
     AlertDialog a = AlertDialog(
       elevation: 0,
       contentPadding: const EdgeInsets.all(8),
-      backgroundColor: Theme.of(context).backgroundColor,
+      backgroundColor: Theme.of(context).colorScheme.background,
       actionsAlignment: MainAxisAlignment.center,
       content: Column(
         mainAxisSize: MainAxisSize.min,
@@ -163,7 +163,7 @@ class ShewaAlerts {
               padding: const EdgeInsets.all(8),
               child: Text(
                 content,
-                style: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context).textTheme.titleLarge,
                 maxLines: 3,
                 textAlign: TextAlign.center,
               ),
@@ -174,13 +174,13 @@ class ShewaAlerts {
       title: Text(
         title,
         textAlign: TextAlign.center,
-        style: Theme.of(context).textTheme.headline4,
+        style: Theme.of(context).textTheme.headlineMedium,
       ),
       actions: [
         MaterialButton(
           child: Text(
             okText ?? (isArabic ? 'تأكيد' : 'Confirm'),
-            style: Theme.of(context).textTheme.headline5!.copyWith(
+            style: Theme.of(context).textTheme.headlineSmall!.copyWith(
                   color: ShewaColors.success.withOpacity(0.8),
                 ),
           ),
@@ -198,7 +198,7 @@ class ShewaAlerts {
           },
           child: Text(
             cancelText ?? (isArabic ? 'الغاء' : 'Cancel'),
-            style: Theme.of(context).textTheme.headline5!.copyWith(
+            style: Theme.of(context).textTheme.headlineSmall!.copyWith(
                   color: ShewaColors.danger.withOpacity(0.8),
                 ),
           ),

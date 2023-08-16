@@ -67,7 +67,7 @@ class ShewaOutLinedButton extends StatelessWidget {
           child: Text(
             text,
             style: textStyle ??
-                theme.textTheme.headline6?.copyWith(
+                theme.textTheme.titleLarge?.copyWith(
                   color: color == Colors.transparent
                       ? theme.primaryColorDark
                       : theme.primaryColorLight,
@@ -148,7 +148,7 @@ class ShewaOutLinedButton extends StatelessWidget {
             ? Text(
                 text,
                 style: textStyle ??
-                    theme.textTheme.headline6?.copyWith(
+                    theme.textTheme.titleLarge?.copyWith(
                       color: color == Colors.transparent
                           ? theme.primaryColorDark
                           : theme.primaryColorLight,

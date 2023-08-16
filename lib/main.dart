@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shewa_ui_kit/drawer/elements/shewa_drawer.dart';
 import 'package:shewa_ui_kit/drawer/elements/shewa_drawer_button.dart';
-import 'package:shewa_ui_kit/elements/widgets/countriesPicker/country_drop_down_button/countries_dropdown_button.dart';
 import 'package:shewa_ui_kit/shewa_ui_kit.dart';
 
 main() async {
@@ -21,9 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'application',
-      theme: ThemeData(
-        backgroundColor: Colors.white,
-      ),
+      theme: ThemeData(),
       home: const Home(),
     );
   }
@@ -49,7 +46,6 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
     return GestureDetector(
       onTap: () {
         FocusManager.instance.primaryFocus?.unfocus();
@@ -116,9 +112,9 @@ class _HomeState extends State<Home> {
               },
             ),
             ShewaButton(
-              duration: Duration(milliseconds: 200),
+              duration: const Duration(milliseconds: 200),
               width: double.infinity,
-              margin: EdgeInsets.symmetric(vertical: 20),
+              margin: const EdgeInsets.symmetric(vertical: 20),
               onPressed: () {},
               color: Colors.red,
               hoverColor: Colors.red,
@@ -135,9 +131,9 @@ class _HomeState extends State<Home> {
               ),
             ),
             ShewaOutLinedButton(
-              duration: Duration(seconds: 3),
+              duration: const Duration(seconds: 3),
               width: double.infinity,
-              margin: EdgeInsets.symmetric(vertical: 20),
+              margin: const EdgeInsets.symmetric(vertical: 20),
               onPressed: () {},
               color: Colors.red,
               hoverColor: Colors.red,

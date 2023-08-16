@@ -36,10 +36,10 @@ class ShewaChip extends StatelessWidget {
                   width: 1,
                 )
               : null,
-          backgroundColor: backgroundColor ?? theme.backgroundColor,
+          backgroundColor: backgroundColor ?? theme.colorScheme.background,
           label: Text(
             value,
-            style: theme.textTheme.bodyText1!.copyWith(
+            style: theme.textTheme.bodyLarge!.copyWith(
               color: textColor ?? Colors.black,
             ),
           ),

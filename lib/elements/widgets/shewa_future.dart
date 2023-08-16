@@ -31,7 +31,7 @@ class ShewaFuture<T> extends StatelessWidget {
             child: Center(
               child: Text(
                 'حدث خطأ يرجى المحاولة لاحقا',
-                style: theme.textTheme.headline1,
+                style: theme.textTheme.displayLarge,
               ),
             ),
           );
@@ -47,7 +47,7 @@ class ShewaFuture<T> extends StatelessWidget {
           child: Center(
             child: Text(
               'حدث خطأ ما',
-              style: theme.textTheme.headline1,
+              style: theme.textTheme.displayLarge,
             ),
           ),
         );

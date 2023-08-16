@@ -61,7 +61,7 @@ class ShewaFlexField extends StatelessWidget {
           readOnly: readOnly,
           obscureText: obscureText,
           validator: validator,
-          style: Theme.of(context).textTheme.bodyText1,
+          style: Theme.of(context).textTheme.bodyLarge,
           onChanged: onChanged,
           controller: controller,
           decoration: InputDecoration(
@@ -69,8 +69,8 @@ class ShewaFlexField extends StatelessWidget {
             suffix: suffix,
             hintText: hint,
             prefix: prefix,
-            hintStyle: Theme.of(context).textTheme.bodyText1,
-            labelStyle: Theme.of(context).textTheme.bodyText1,
+            hintStyle: Theme.of(context).textTheme.bodyLarge,
+            labelStyle: Theme.of(context).textTheme.bodyLarge,
             enabledBorder: OutlineInputBorder(
               borderSide: BorderSide(
                 color: Colors.grey.shade300,

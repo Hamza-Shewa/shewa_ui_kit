@@ -7,13 +7,13 @@ class ShewaLoading extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return Container(
-      color: theme.backgroundColor,
+      color: theme.colorScheme.background,
       child: Center(
         child: CircularProgressIndicator(
           color: Theme.of(context).primaryColor,
           strokeWidth: 4,
           value: progress,
-          backgroundColor: Theme.of(context).backgroundColor,
+          backgroundColor: Theme.of(context).colorScheme.background,
         ),
       ),
     );

@@ -50,7 +50,7 @@ class ShewaImage extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(vertical: 12.0),
                         child: Text(
                           'حدثت مشكلة أثناء تحميل الصورة',
-                          style: theme.textTheme.headline6!.copyWith(
+                          style: theme.textTheme.titleLarge!.copyWith(
                             color: theme.primaryColor,
                           ),
                           textAlign: TextAlign.center,
