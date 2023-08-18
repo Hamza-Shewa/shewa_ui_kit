@@ -29,6 +29,7 @@ class ShewaDrawer extends StatefulWidget {
     this.isExpanded = false,
     this.circleAvatar,
     this.alwaysShowHeader = false,
+    this.enableGesture = true,
   }) : super(key: key);
   final Widget? leading;
   final AnimatedIconData icon;
@@ -47,7 +48,7 @@ class ShewaDrawer extends StatefulWidget {
   final TextDirection textDirection;
   final Widget? circleAvatar;
   final bool alwaysShowHeader;
-
+  final bool enableGesture;
   @override
   ShewaDrawerState createState() => ShewaDrawerState();
 }
@@ -79,39 +80,41 @@ class ShewaDrawerState extends State<ShewaDrawer>
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onHorizontalDragUpdate: (DragUpdateDetails e) async {
-        if (a.isAnimating) return;
-        if (widget.endDrawer) {
-          if (widget.textDirection == TextDirection.rtl) {
-            if (e.primaryDelta!.isNegative) {
-              await a.reverse();
-            } else {
-              await a.forward();
+      onHorizontalDragUpdate: widget.enableGesture
+          ? (DragUpdateDetails e) async {
+              if (a.isAnimating) return;
+              if (widget.endDrawer) {
+                if (widget.textDirection == TextDirection.rtl) {
+                  if (e.primaryDelta!.isNegative) {
+                    await a.reverse();
+                  } else {
+                    await a.forward();
+                  }
+                } else {
+                  if (e.primaryDelta!.isNegative) {
+                    await a.forward();
+                  } else {
+                    await a.reverse();
+                  }
+                }
+              } else {
+                if (widget.textDirection == TextDirection.rtl) {
+                  if (e.primaryDelta!.isNegative) {
+                    await a.forward();
+                  } else {
+                    await a.reverse();
+                  }
+                } else {
+                  if (e.primaryDelta!.isNegative) {
+                    await a.reverse();
+                  } else {
+                    await a.forward();
+                  }
+                }
+              }
+              setState(() {});
             }
-          } else {
-            if (e.primaryDelta!.isNegative) {
-              await a.forward();
-            } else {
-              await a.reverse();
-            }
-          }
-        } else {
-          if (widget.textDirection == TextDirection.rtl) {
-            if (e.primaryDelta!.isNegative) {
-              await a.forward();
-            } else {
-              await a.reverse();
-            }
-          } else {
-            if (e.primaryDelta!.isNegative) {
-              await a.reverse();
-            } else {
-              await a.forward();
-            }
-          }
-        }
-        setState(() {});
-      },
+          : null,
       child: SafeArea(
         child: AnimatedContainer(
           decoration: BoxDecoration(
