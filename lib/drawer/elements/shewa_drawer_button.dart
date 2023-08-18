@@ -11,7 +11,7 @@ class ShewaDrawerButton {
     this.barColor,
   });
 
-  final Icon icon;
+  final Widget icon;
   final Widget? title;
   final VoidCallback onPressed;
   final Color? hoverColor;
