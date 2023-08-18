@@ -16,6 +16,7 @@ class ShewaDrawer extends StatefulWidget {
     required this.icon,
     required this.buttons,
     required this.textDirection,
+    this.iconColor,
     this.divider,
     this.minWidth = 75,
     this.maxWidth = 250,
@@ -31,6 +32,7 @@ class ShewaDrawer extends StatefulWidget {
   }) : super(key: key);
   final Widget? leading;
   final AnimatedIconData icon;
+  final Color? iconColor;
   final List<ShewaDrawerButton> buttons;
   final Widget? divider;
   final double minWidth;
@@ -113,7 +115,8 @@ class ShewaDrawerState extends State<ShewaDrawer>
       child: SafeArea(
         child: AnimatedContainer(
           decoration: BoxDecoration(
-            color: widget.backgroundColor ?? Theme.of(context).colorScheme.background,
+            color: widget.backgroundColor ??
+                Theme.of(context).colorScheme.background,
             borderRadius: widget.endDrawer == true
                 ? widget.textDirection == TextDirection.ltr
                     ? const BorderRadius.only(
@@ -181,7 +184,8 @@ class ShewaDrawerState extends State<ShewaDrawer>
                       icon: AnimatedIcon(
                         progress: a,
                         icon: widget.icon,
-                        color: Theme.of(context).primaryColor,
+                        color:
+                            widget.iconColor ?? Theme.of(context).primaryColor,
                       ),
                     ),
                   ],
