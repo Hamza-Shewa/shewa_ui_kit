@@ -313,10 +313,7 @@ class ShewaDrawerState extends State<ShewaDrawer>
                               ? const SizedBox()
                               : Flexible(
                                   flex: value.titleFlex ?? 1,
-                                  child: Padding(
-                                    padding: const EdgeInsets.only(top: 8),
-                                    child: value.title!,
-                                  ),
+                                  child: value.title!,
                                 ),
                       ],
                     ),
