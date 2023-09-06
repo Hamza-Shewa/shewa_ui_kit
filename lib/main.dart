@@ -80,7 +80,10 @@ class _HomeState extends State<Home> {
             ShewaDrawerButton(
               color: Colors.white,
               icon: const Icon(Icons.receipt),
-              title: const Text('فواتير'),
+              title: const Text('Jautājumi un atbildes'),
+              titleFlex: 2,
+              iconFlex: 0,
+              iconMargin: const EdgeInsetsDirectional.only(end: 10),
               onPressed: () {},
             ),
             ShewaDrawerButton(

@@ -9,6 +9,9 @@ class ShewaDrawerButton {
     this.color,
     this.hoverColor,
     this.barColor,
+    this.titleFlex,
+    this.iconFlex = 1,
+    this.iconMargin = const EdgeInsets.all(0),
   }) : assert(icon != null || title != null);
 
   final Widget? icon;
@@ -17,4 +20,7 @@ class ShewaDrawerButton {
   final Color? hoverColor;
   final Color? color;
   final Color? barColor;
+  final int? titleFlex;
+  final int iconFlex;
+  final EdgeInsetsGeometry iconMargin;
 }

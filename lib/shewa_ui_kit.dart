@@ -33,3 +33,5 @@ export 'package:shewa_ui_kit/elements/utils/shewa_kit_utils.dart';
 //country picker
 export 'package:shewa_ui_kit/elements/widgets/countriesPicker/shewa_country_picker.dart';
 
+//drawer
+export 'package:shewa_ui_kit/drawer/shewa_drawer.dart';

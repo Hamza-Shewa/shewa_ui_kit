@@ -297,11 +297,22 @@ class ShewaDrawerState extends State<ShewaDrawer>
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         if (value.icon != null)
-                          Expanded(flex: 1, child: value.icon!),
+                          Expanded(
+                            flex: widthAnimation.value == widget.minWidth
+                                ? 1
+                                : value.iconFlex,
+                            child: Container(
+                              margin: widthAnimation.value == widget.minWidth
+                                  ? null
+                                  : value.iconMargin,
+                              child: value.icon!,
+                            ),
+                          ),
                         if (value.title != null)
                           widthAnimation.value == widget.minWidth
                               ? const SizedBox()
                               : Flexible(
+                                  flex: value.titleFlex ?? 1,
                                   child: Padding(
                                     padding: const EdgeInsets.only(top: 8),
                                     child: value.title!,
