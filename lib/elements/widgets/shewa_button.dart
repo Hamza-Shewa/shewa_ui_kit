@@ -21,6 +21,7 @@ class ShewaButton extends StatelessWidget {
     this.textOnly = false,
     this.elevation = 0,
     this.duration,
+    this.border = true,
   }) : super(key: key);
 
   final Function()? onPressed;
@@ -41,6 +42,7 @@ class ShewaButton extends StatelessWidget {
   final bool textOnly;
   final double elevation;
   final Duration? duration;
+  final bool border;
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -105,10 +107,10 @@ class ShewaButton extends StatelessWidget {
       margin: margin,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(radius),
-        border: borderColor == null
+        border: borderColor == null && !border
             ? null
             : Border.all(
-                color: borderColor!,
+                color: borderColor ?? theme.primaryColorDark,
               ),
       ),
       child: TextButton(
