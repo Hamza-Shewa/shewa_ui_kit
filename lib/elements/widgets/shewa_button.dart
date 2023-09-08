@@ -21,7 +21,7 @@ class ShewaButton extends StatelessWidget {
     this.textOnly = false,
     this.elevation = 0,
     this.duration,
-    this.border = true,
+    this.border = false,
   }) : super(key: key);
 
   final Function()? onPressed;
