@@ -131,6 +131,13 @@ class ShewaButton extends StatelessWidget {
                         ? theme.primaryColor.withOpacity(.2)
                         : color!.withOpacity(.2);
               }
+              if (states.contains(MaterialState.focused)) {
+                return hoverColor != null
+                    ? hoverColor!.withOpacity(.2)
+                    : color == null
+                        ? theme.primaryColor.withOpacity(.2)
+                        : color!.withOpacity(.2);
+              }
               if (states.contains(MaterialState.pressed)) {
                 return hoverColor != null
                     ? hoverColor!.withOpacity(.4)
