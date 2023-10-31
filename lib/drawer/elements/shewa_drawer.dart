@@ -271,9 +271,11 @@ class ShewaDrawerState extends State<ShewaDrawer>
                   child: TextButton(
                     style: ButtonStyle(
                       side: MaterialStateProperty.all(
-                        BorderSide(
-                          color: Theme.of(context).primaryColor,
-                        ),
+                        value.border ??
+                            BorderSide(
+                              color: value.borderColor ??
+                                  Theme.of(context).primaryColor,
+                            ),
                       ),
                       shape: MaterialStateProperty.all(
                         RoundedRectangleBorder(
