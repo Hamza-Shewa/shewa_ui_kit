@@ -6,6 +6,7 @@ class ShewaDrawerButton {
     this.icon,
     this.title,
     required this.onPressed,
+    this.showSideBar = true,
     this.color,
     this.hoverColor,
     this.barColor,
@@ -27,4 +28,5 @@ class ShewaDrawerButton {
   final BorderSide? border;
   final Color? borderColor;
   final EdgeInsetsGeometry iconMargin;
+  final bool showSideBar;
 }

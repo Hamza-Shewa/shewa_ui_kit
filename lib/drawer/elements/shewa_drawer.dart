@@ -12,10 +12,11 @@ class ShewaDrawer extends StatefulWidget {
   /// [buttonMargin] is set to All(4.0) by default
   const ShewaDrawer({
     Key? key,
-    this.leading,
-    required this.icon,
     required this.buttons,
     required this.textDirection,
+    this.leading,
+    this.icon,
+    this.iconData,
     this.iconColor,
     this.divider,
     this.minWidth = 75,
@@ -30,9 +31,11 @@ class ShewaDrawer extends StatefulWidget {
     this.circleAvatar,
     this.alwaysShowHeader = false,
     this.enableGesture = true,
+    this.disableExpantion = false,
   }) : super(key: key);
   final Widget? leading;
-  final AnimatedIconData icon;
+  final AnimatedIconData? iconData;
+  final Widget? icon;
   final Color? iconColor;
   final List<ShewaDrawerButton> buttons;
   final Widget? divider;
@@ -49,6 +52,7 @@ class ShewaDrawer extends StatefulWidget {
   final Widget? circleAvatar;
   final bool alwaysShowHeader;
   final bool enableGesture;
+  final bool disableExpantion;
   @override
   ShewaDrawerState createState() => ShewaDrawerState();
 }
@@ -153,46 +157,50 @@ class ShewaDrawerState extends State<ShewaDrawer>
                     (widget.alwaysShowHeader ||
                         widget.maxWidth == widthAnimation.value))
                   widget.circleAvatar!,
-                Flex(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  direction: Axis.horizontal,
-                  children: [
-                    widthAnimation.value == widget.minWidth ||
-                            widget.leading == null
-                        ? const SizedBox()
-                        : Expanded(
-                            child: widget.leading as Widget,
-                          ),
-                    ShewaIconButton(
-                      isRounded: true,
-                      padding: EdgeInsets.zero,
-                      //alignment: Alignment.center,
-                      onPressed: () async {
-                        if (widthAnimation.value <= widget.minWidth) {
-                          if (widget.isExpanded) {
-                            await a.reverse();
-                          } else {
-                            await a.forward();
-                          }
-                        } else {
-                          if (widget.isExpanded) {
-                            await a.forward();
-                          } else {
-                            await a.reverse();
-                          }
-                        }
-                        setState(() {});
-                      },
-                      icon: AnimatedIcon(
-                        progress: a,
-                        icon: widget.icon,
-                        color:
-                            widget.iconColor ?? Theme.of(context).primaryColor,
+                if (widget.icon != null || widget.iconData != null)
+                  Flex(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    direction: Axis.horizontal,
+                    children: [
+                      widthAnimation.value == widget.minWidth ||
+                              widget.leading == null
+                          ? const SizedBox()
+                          : Expanded(
+                              child: widget.leading as Widget,
+                            ),
+                      ShewaIconButton(
+                        isRounded: true,
+                        padding: EdgeInsets.zero,
+                        //alignment: Alignment.center,
+                        onPressed: widget.disableExpantion
+                            ? null
+                            : () async {
+                                if (widthAnimation.value <= widget.minWidth) {
+                                  if (widget.isExpanded) {
+                                    await a.reverse();
+                                  } else {
+                                    await a.forward();
+                                  }
+                                } else {
+                                  if (widget.isExpanded) {
+                                    await a.forward();
+                                  } else {
+                                    await a.reverse();
+                                  }
+                                }
+                                setState(() {});
+                              },
+                        icon: widget.icon ??
+                            AnimatedIcon(
+                              progress: a,
+                              icon: widget.iconData!,
+                              color: widget.iconColor ??
+                                  Theme.of(context).primaryColor,
+                            ),
                       ),
-                    ),
-                  ],
-                ),
+                    ],
+                  ),
                 widget.divider ?? const SizedBox(),
                 Expanded(
                   child: SingleChildScrollView(
@@ -235,28 +243,30 @@ class ShewaDrawerState extends State<ShewaDrawer>
         Container(
           height: 45,
           width: 5,
-          decoration: BoxDecoration(
-            color: value.barColor ?? Theme.of(context).primaryColor,
-            borderRadius: widget.endDrawer == true
-                ? widget.textDirection == TextDirection.ltr
-                    ? const BorderRadius.only(
-                        bottomLeft: Radius.circular(15),
-                        topLeft: Radius.circular(15),
-                      )
-                    : const BorderRadius.only(
-                        bottomRight: Radius.circular(15),
-                        topRight: Radius.circular(15),
-                      )
-                : widget.textDirection == TextDirection.rtl
-                    ? const BorderRadius.only(
-                        bottomLeft: Radius.circular(15),
-                        topLeft: Radius.circular(15),
-                      )
-                    : const BorderRadius.only(
-                        bottomRight: Radius.circular(15),
-                        topRight: Radius.circular(15),
-                      ),
-          ),
+          decoration: value.showSideBar
+              ? BoxDecoration(
+                  color: value.barColor ?? Theme.of(context).primaryColor,
+                  borderRadius: widget.endDrawer == true
+                      ? widget.textDirection == TextDirection.ltr
+                          ? const BorderRadius.only(
+                              bottomLeft: Radius.circular(15),
+                              topLeft: Radius.circular(15),
+                            )
+                          : const BorderRadius.only(
+                              bottomRight: Radius.circular(15),
+                              topRight: Radius.circular(15),
+                            )
+                      : widget.textDirection == TextDirection.rtl
+                          ? const BorderRadius.only(
+                              bottomLeft: Radius.circular(15),
+                              topLeft: Radius.circular(15),
+                            )
+                          : const BorderRadius.only(
+                              bottomRight: Radius.circular(15),
+                              topRight: Radius.circular(15),
+                            ),
+                )
+              : null,
         ),
         Expanded(
           child: Container(

@@ -63,7 +63,7 @@ class _HomeState extends State<Home> {
             title: Text('hamza bashir'),
             subtitle: Text('administrator'),
           ),
-          icon: AnimatedIcons.menu_close,
+          iconData: AnimatedIcons.menu_close,
           buttons: [
             ShewaDrawerButton(
               color: Colors.white,
