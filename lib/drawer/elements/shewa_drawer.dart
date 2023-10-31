@@ -157,50 +157,51 @@ class ShewaDrawerState extends State<ShewaDrawer>
                     (widget.alwaysShowHeader ||
                         widget.maxWidth == widthAnimation.value))
                   widget.circleAvatar!,
-                if (widget.icon != null || widget.iconData != null)
-                  Flex(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    direction: Axis.horizontal,
-                    children: [
-                      widthAnimation.value == widget.minWidth ||
-                              widget.leading == null
-                          ? const SizedBox()
-                          : Expanded(
-                              child: widget.leading as Widget,
-                            ),
-                      ShewaIconButton(
-                        isRounded: true,
-                        padding: EdgeInsets.zero,
-                        //alignment: Alignment.center,
-                        onPressed: widget.disableExpantion
-                            ? null
-                            : () async {
-                                if (widthAnimation.value <= widget.minWidth) {
-                                  if (widget.isExpanded) {
-                                    await a.reverse();
-                                  } else {
-                                    await a.forward();
-                                  }
-                                } else {
-                                  if (widget.isExpanded) {
-                                    await a.forward();
-                                  } else {
-                                    await a.reverse();
-                                  }
-                                }
-                                setState(() {});
-                              },
-                        icon: widget.icon ??
-                            AnimatedIcon(
+                Flex(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  direction: Axis.horizontal,
+                  children: [
+                    (widthAnimation.value == widget.minWidth ||
+                            widget.leading == null)
+                        ? const SizedBox()
+                        : Expanded(
+                            child: widget.leading as Widget,
+                          ),
+                    if (widget.icon != null || widget.iconData != null)
+                      widget.icon ??
+                          ShewaIconButton(
+                            isRounded: true,
+                            padding: EdgeInsets.zero,
+                            //alignment: Alignment.center,
+                            onPressed: widget.disableExpantion
+                                ? null
+                                : () async {
+                                    if (widthAnimation.value <=
+                                        widget.minWidth) {
+                                      if (widget.isExpanded) {
+                                        await a.reverse();
+                                      } else {
+                                        await a.forward();
+                                      }
+                                    } else {
+                                      if (widget.isExpanded) {
+                                        await a.forward();
+                                      } else {
+                                        await a.reverse();
+                                      }
+                                    }
+                                    setState(() {});
+                                  },
+                            icon: AnimatedIcon(
                               progress: a,
                               icon: widget.iconData!,
                               color: widget.iconColor ??
                                   Theme.of(context).primaryColor,
                             ),
-                      ),
-                    ],
-                  ),
+                          ),
+                  ],
+                ),
                 widget.divider ?? const SizedBox(),
                 Expanded(
                   child: SingleChildScrollView(
