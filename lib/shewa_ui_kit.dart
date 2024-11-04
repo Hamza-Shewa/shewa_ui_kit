@@ -1,4 +1,4 @@
-library shewa_ui_kit;
+library;
 
 export 'package:shewa_ui_kit/elements/widgets/my_password_field.dart';
 export 'package:shewa_ui_kit/elements/widgets/quantity_selector.dart';

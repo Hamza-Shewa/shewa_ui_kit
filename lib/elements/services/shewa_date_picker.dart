@@ -10,7 +10,7 @@ class ShewaPicker {
           data: Theme.of(context).copyWith(
             textButtonTheme: TextButtonThemeData(
               style: ButtonStyle(
-                fixedSize: MaterialStateProperty.all(const Size(80, 50)),
+                fixedSize: WidgetStateProperty.all(const Size(80, 50)),
               ),
             ),
             colorScheme: ColorScheme.fromSeed(

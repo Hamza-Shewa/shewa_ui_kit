@@ -20,8 +20,7 @@ class ShewaSearchField extends StatelessWidget {
       this.width = double.infinity,
       this.validator,
       this.node,
-      Key? key})
-      : super(key: key);
+      super.key});
 
   final String label;
   final String hint;

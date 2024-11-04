@@ -4,14 +4,14 @@ import 'package:shewa_ui_kit/elements/widgets/shewa_loading.dart';
 
 class ShewaImage extends StatelessWidget {
   const ShewaImage({
-    Key? key,
+    super.key,
     required this.url,
     this.height = 225,
     this.width = 225,
     this.radius = 0,
     this.boxFit = BoxFit.fill,
     this.errorWidget,
-  }) : super(key: key);
+  });
   final String? url;
   final double height;
   final double width;

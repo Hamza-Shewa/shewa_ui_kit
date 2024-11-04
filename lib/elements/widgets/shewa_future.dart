@@ -5,11 +5,11 @@ import 'package:shewa_ui_kit/elements/widgets/shewa_loading.dart';
 
 class ShewaFuture<T> extends StatelessWidget {
   const ShewaFuture({
-    Key? key,
+    super.key,
     required this.future,
     required this.view,
     this.size = 180,
-  }) : super(key: key);
+  });
   final Future<T> future;
   final Widget Function(T?) view;
   final double size;

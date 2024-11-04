@@ -18,7 +18,7 @@ class ShewaAlerts {
         });
         return Dialog(
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
-          backgroundColor: Theme.of(context).colorScheme.background,
+          backgroundColor: Theme.of(context).colorScheme.surface,
           elevation: 0,
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
@@ -51,7 +51,7 @@ class ShewaAlerts {
             child: CircularProgressIndicator(
               color: loadingColor ?? theme.primaryColor,
               strokeWidth: 4,
-              backgroundColor: backgroundColor ?? theme.colorScheme.background,
+              backgroundColor: backgroundColor ?? theme.colorScheme.surface,
             ),
           ),
         );
@@ -66,7 +66,7 @@ class ShewaAlerts {
       builder: (context) {
         return Dialog(
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
-          backgroundColor: Theme.of(context).colorScheme.background,
+          backgroundColor: Theme.of(context).colorScheme.surface,
           elevation: 0,
           child: Container(
             padding: const EdgeInsets.all(24.0),
@@ -153,7 +153,7 @@ class ShewaAlerts {
     AlertDialog a = AlertDialog(
       elevation: 0,
       contentPadding: const EdgeInsets.all(8),
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       actionsAlignment: MainAxisAlignment.center,
       content: Column(
         mainAxisSize: MainAxisSize.min,

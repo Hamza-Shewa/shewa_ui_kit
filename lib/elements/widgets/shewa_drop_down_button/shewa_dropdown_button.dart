@@ -6,15 +6,14 @@ import 'package:shewa_ui_kit/elements/widgets/shewa_drop_down_button/components/
 
 class ShewaDropdownButton<T> extends StatefulWidget {
   const ShewaDropdownButton(
-      {Key? key,
+      {super.key,
       required this.items,
       this.onChanged,
       this.searchField = false,
       required this.controller,
       this.shewaDropDownStyle,
       this.initialValue,
-      this.enabled = true})
-      : super(key: key);
+      this.enabled = true});
   final List<ShewaDropdownItem> items;
   final Function(Object value)? onChanged;
   final bool searchField;

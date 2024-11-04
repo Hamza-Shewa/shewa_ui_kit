@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shewa_ui_kit/drawer/elements/shewa_drawer.dart';
-import 'package:shewa_ui_kit/drawer/elements/shewa_drawer_button.dart';
 import 'package:shewa_ui_kit/shewa_ui_kit.dart';
 
 main() async {
@@ -14,7 +12,7 @@ main() async {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +25,7 @@ class MyApp extends StatelessWidget {
 }
 
 class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
+  const Home({super.key});
 
   @override
   State<Home> createState() => _HomeState();

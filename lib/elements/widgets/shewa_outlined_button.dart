@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class ShewaOutLinedButton extends StatelessWidget {
   const ShewaOutLinedButton({
-    Key? key,
+    super.key,
     required this.onPressed,
     required this.text,
     this.onLongPress,
@@ -21,7 +21,7 @@ class ShewaOutLinedButton extends StatelessWidget {
     this.textOnly = false,
     this.elevation = 0,
     this.duration,
-  }) : super(key: key);
+  });
 
   final Function()? onPressed;
   final Function()? onLongPress;
@@ -112,21 +112,21 @@ class ShewaOutLinedButton extends StatelessWidget {
         onLongPress: onLongPress,
         style: theme.textButtonTheme.style?.copyWith(
            animationDuration: duration,
-          shape: MaterialStateProperty.all(
+          shape: WidgetStateProperty.all(
             RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(radius),
             ),
           ),
-          overlayColor: MaterialStateProperty.resolveWith(
+          overlayColor: WidgetStateProperty.resolveWith(
             (states) {
-              if (states.contains(MaterialState.hovered)) {
+              if (states.contains(WidgetState.hovered)) {
                 return hoverColor != null
                     ? hoverColor!.withOpacity(.2)
                     : color == null
                         ? theme.primaryColor.withOpacity(.2)
                         : color!.withOpacity(.2);
               }
-              if (states.contains(MaterialState.pressed)) {
+              if (states.contains(WidgetState.pressed)) {
                 return hoverColor != null
                     ? hoverColor!.withOpacity(.4)
                     : color == null
@@ -137,8 +137,8 @@ class ShewaOutLinedButton extends StatelessWidget {
             },
           ),
           minimumSize:
-              MaterialStateProperty.all(Size(textOnly ? 0 : width, height)),
-          backgroundColor: MaterialStateProperty.resolveWith(
+              WidgetStateProperty.all(Size(textOnly ? 0 : width, height)),
+          backgroundColor: WidgetStateProperty.resolveWith(
             (states) {
               return Colors.transparent;
             },

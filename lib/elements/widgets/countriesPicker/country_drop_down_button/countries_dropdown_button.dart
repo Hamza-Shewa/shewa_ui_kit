@@ -6,7 +6,7 @@ import '../shewa_country_picker.dart';
 
 class CountriesDropdownButton extends StatefulWidget {
   const CountriesDropdownButton({
-    Key? key,
+    super.key,
     required this.items,
     this.onChanged,
     this.searchField = false,
@@ -14,7 +14,7 @@ class CountriesDropdownButton extends StatefulWidget {
     required this.controller,
     this.shewaDropDownStyle,
     this.enabled = false,
-  }) : super(key: key);
+  });
   final List<CountriesDropDownItem<Country>> items;
   final Function(Object value)? onChanged;
   final Country? initialValue;

@@ -1,4 +1,4 @@
-library shewa_country_picker;
+library;
 
 export 'country_drop_down_button/countries_dropdown_button.dart';
 export 'country_drop_down_button/shewa_country_picker.dart';

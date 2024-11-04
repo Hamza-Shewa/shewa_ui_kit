@@ -21,8 +21,7 @@ class ShewaFlexField extends StatelessWidget {
       this.width = 250,
       this.focusNode,
       this.textAlign,
-      Key? key})
-      : super(key: key);
+      super.key});
 
   final String label;
   final String hint;

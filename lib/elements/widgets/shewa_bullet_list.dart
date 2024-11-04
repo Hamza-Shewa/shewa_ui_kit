@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ShewaBulletList extends StatelessWidget {
-  const ShewaBulletList(this.texts, {Key? key}) : super(key: key);
+  const ShewaBulletList(this.texts, {super.key});
   final List<String> texts;
 
   @override
@@ -24,7 +24,7 @@ class ShewaBulletList extends StatelessWidget {
 }
 
 class ShewaBulletListItem extends StatelessWidget {
-  const ShewaBulletListItem(this.text, {Key? key}) : super(key: key);
+  const ShewaBulletListItem(this.text, {super.key});
   final String text;
 
   @override

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class ShewaIconButton extends StatelessWidget {
   const ShewaIconButton({
-    Key? key,
+    super.key,
     required this.onPressed,
     required this.icon,
     this.width = 50,
@@ -17,7 +17,7 @@ class ShewaIconButton extends StatelessWidget {
     this.shadow = false,
     this.tooltip,
     this.elevation = 0,
-  }) : super(key: key);
+  });
 
   final Function()? onPressed;
   final Widget icon;
@@ -37,19 +37,19 @@ class ShewaIconButton extends StatelessWidget {
   Widget build(BuildContext context) {
     TextButtonThemeData theme = TextButtonThemeData(
       style: ButtonStyle(
-        shadowColor: MaterialStateProperty.all(Colors.black),
+        shadowColor: WidgetStateProperty.all(Colors.black),
         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-        minimumSize: MaterialStateProperty.all(Size(width, height)),
-        shape: MaterialStateProperty.all(
+        minimumSize: WidgetStateProperty.all(Size(width, height)),
+        shape: WidgetStateProperty.all(
           isRounded
               ? const CircleBorder()
               : RoundedRectangleBorder(
                   borderRadius: borderRadius,
                 ),
         ),
-        overlayColor: MaterialStateProperty.resolveWith(
+        overlayColor: WidgetStateProperty.resolveWith(
           (states) {
-            if (states.contains(MaterialState.pressed)) {
+            if (states.contains(WidgetState.pressed)) {
               return hoverColor != null
                   ? hoverColor!.withOpacity(0.3)
                   : Theme.of(context).primaryColor.withOpacity(0.8);
@@ -57,9 +57,9 @@ class ShewaIconButton extends StatelessWidget {
             return color ?? Colors.white.withOpacity(0.3);
           },
         ),
-        surfaceTintColor: MaterialStateProperty.resolveWith(
+        surfaceTintColor: WidgetStateProperty.resolveWith(
           (states) {
-            if (states.contains(MaterialState.pressed)) {
+            if (states.contains(WidgetState.pressed)) {
               return hoverColor != null
                   ? hoverColor!.withOpacity(0.2)
                   : Theme.of(context).primaryColor.withOpacity(0.8);
@@ -67,9 +67,9 @@ class ShewaIconButton extends StatelessWidget {
             return color ?? Colors.white.withOpacity(0.2);
           },
         ),
-        backgroundColor: MaterialStateProperty.resolveWith(
+        backgroundColor: WidgetStateProperty.resolveWith(
           (states) {
-            if (states.contains(MaterialState.pressed)) {
+            if (states.contains(WidgetState.pressed)) {
               return hoverColor != null
                   ? hoverColor!.withOpacity(0.2)
                   : Theme.of(context).primaryColor.withOpacity(0.8);
@@ -104,20 +104,20 @@ class ShewaIconButton extends StatelessWidget {
         style: Theme.of(context).textButtonTheme.style == null
             ? theme.style
             : Theme.of(context).textButtonTheme.style!.copyWith(
-                  padding: const MaterialStatePropertyAll(EdgeInsets.zero),
-                  shadowColor: MaterialStateProperty.all(Colors.black),
+                  padding: const WidgetStatePropertyAll(EdgeInsets.zero),
+                  shadowColor: WidgetStateProperty.all(Colors.black),
                   tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                  minimumSize: MaterialStateProperty.all(Size(width, height)),
-                  shape: MaterialStateProperty.all(
+                  minimumSize: WidgetStateProperty.all(Size(width, height)),
+                  shape: WidgetStateProperty.all(
                     isRounded
                         ? const CircleBorder()
                         : RoundedRectangleBorder(
                             borderRadius: borderRadius,
                           ),
                   ),
-                  backgroundColor: MaterialStateProperty.resolveWith(
+                  backgroundColor: WidgetStateProperty.resolveWith(
                     (states) {
-                      if (states.contains(MaterialState.pressed)) {
+                      if (states.contains(WidgetState.pressed)) {
                         return hoverColor != null
                             ? hoverColor!.withOpacity(0.2)
                             : Theme.of(context).primaryColor.withOpacity(0.8);

@@ -5,11 +5,11 @@ import 'package:shewa_ui_kit/elements/widgets/shewa_icon_button.dart';
 
 class ShewaSlider extends StatefulWidget {
   const ShewaSlider({
-    Key? key,
+    super.key,
     required this.children,
     this.duration,
     this.miniImage = false,
-  }) : super(key: key);
+  });
   final List<Widget> children;
   final Duration? duration;
   final bool miniImage;

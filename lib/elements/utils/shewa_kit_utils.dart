@@ -1,4 +1,4 @@
-library shewa_kit_utils;
+library;
 
 export 'validators/validators.dart';
 export 'extensions/date_extensions.dart';

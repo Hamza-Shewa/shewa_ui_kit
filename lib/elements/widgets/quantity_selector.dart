@@ -6,13 +6,13 @@ import 'package:shewa_ui_kit/elements/widgets/shewa_icon_button.dart';
 
 class QuantitySelector extends StatefulWidget {
   const QuantitySelector({
-    Key? key,
+    super.key,
     required this.controller,
     this.width = 300,
     this.height = 50,
     this.margin = const EdgeInsets.all(8),
     required this.onTap,
-  }) : super(key: key);
+  });
   final TextEditingController controller;
   final double width;
   final double height;

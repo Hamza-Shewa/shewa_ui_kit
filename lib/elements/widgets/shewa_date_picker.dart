@@ -5,8 +5,7 @@ import 'package:shewa_ui_kit/elements/widgets/shewa_flex_field.dart';
 
 class ShewaDatePicker extends StatefulWidget {
   const ShewaDatePicker(
-      {Key? key, required this.controller, this.label = '', this.hint = ''})
-      : super(key: key);
+      {super.key, required this.controller, this.label = '', this.hint = ''});
   final TextEditingController controller;
   final String label, hint;
 

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class ShewaChip extends StatelessWidget {
   const ShewaChip({
-    Key? key,
+    super.key,
     required this.value,
     this.padding = const EdgeInsets.all(8.0),
     this.margin = const EdgeInsets.all(0.0),
@@ -11,7 +11,7 @@ class ShewaChip extends StatelessWidget {
     this.textColor,
     this.borderColor,
     this.ontap,
-  }) : super(key: key);
+  });
   final String value;
   final EdgeInsetsGeometry padding;
   final EdgeInsetsGeometry margin;
@@ -36,7 +36,7 @@ class ShewaChip extends StatelessWidget {
                   width: 1,
                 )
               : null,
-          backgroundColor: backgroundColor ?? theme.colorScheme.background,
+          backgroundColor: backgroundColor ?? theme.colorScheme.surface,
           label: Text(
             value,
             style: theme.textTheme.bodyLarge!.copyWith(

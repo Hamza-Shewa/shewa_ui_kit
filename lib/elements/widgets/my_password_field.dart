@@ -15,8 +15,7 @@ class MyPasswordField extends StatefulWidget {
       this.width = 250,
       this.height,
       this.align = TextAlign.start,
-      Key? key})
-      : super(key: key);
+      super.key});
 
   final String label;
   final String hint;

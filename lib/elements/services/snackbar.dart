@@ -38,7 +38,7 @@ class ShewaSnackbar {
             style: textStyle ??
                 Theme.of(_context).textTheme.headlineSmall!.copyWith(
                       fontWeight: FontWeight.bold,
-                      color: textColor ?? Theme.of(_context).colorScheme.background,
+                      color: textColor ?? Theme.of(_context).colorScheme.surface,
                     ),
           ),
         ),

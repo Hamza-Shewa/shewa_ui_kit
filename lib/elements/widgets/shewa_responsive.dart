@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ShewaResponsive extends StatelessWidget {
-  const ShewaResponsive({Key? key, required this.mobile, required this.tablet})
-      : super(key: key);
+  const ShewaResponsive({super.key, required this.mobile, required this.tablet});
   final Widget mobile;
   final Widget tablet;
 

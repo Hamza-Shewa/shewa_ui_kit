@@ -5,14 +5,14 @@ import 'package:shewa_ui_kit/elements/widgets/shewa_responsive.dart';
 
 class ShewaMultiView extends StatefulWidget {
   const ShewaMultiView({
-    Key? key,
+    super.key,
     required this.leadingTitle,
     required this.singleViewChildren,
     required this.multiViewChildren,
     required this.trailingTitle,
     this.decoration,
     this.contentHeader,
-  }) : super(key: key);
+  });
   final List<Widget> leadingTitle;
   final List<Widget> trailingTitle;
   final List<Widget> singleViewChildren;

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class ShewaContainer extends StatelessWidget {
   const ShewaContainer({
-    Key? key,
+    super.key,
     this.width = double.infinity,
     this.height,
     this.margin = const EdgeInsets.all(8),
@@ -15,7 +15,7 @@ class ShewaContainer extends StatelessWidget {
     this.align,
     this.onTap,
     this.shadowColor = Colors.black87,
-  }) : super(key: key);
+  });
 
   final double? width;
   final double? height;
@@ -52,7 +52,7 @@ class ShewaContainer extends StatelessWidget {
                   )
                 ]
               : null,
-          color: backgroundColor ?? theme.colorScheme.background,
+          color: backgroundColor ?? theme.colorScheme.surface,
         ),
         child: child,
       ),

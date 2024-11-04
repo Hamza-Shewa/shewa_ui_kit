@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class ShewaButton extends StatelessWidget {
   const ShewaButton({
-    Key? key,
+    super.key,
     required this.onPressed,
     required this.text,
     this.onLongPress,
@@ -22,7 +22,7 @@ class ShewaButton extends StatelessWidget {
     this.elevation = 0,
     this.duration,
     this.border = false,
-  }) : super(key: key);
+  });
 
   final Function()? onPressed;
   final Function()? onLongPress;
@@ -118,29 +118,29 @@ class ShewaButton extends StatelessWidget {
         onLongPress: onLongPress,
         style: theme.textButtonTheme.style?.copyWith(
           animationDuration: duration,
-          elevation: MaterialStatePropertyAll(elevation),
-          shape: MaterialStateProperty.all(
+          elevation: WidgetStatePropertyAll(elevation),
+          shape: WidgetStateProperty.all(
             RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(radius),
             ),
           ),
-          overlayColor: MaterialStateProperty.resolveWith(
+          overlayColor: WidgetStateProperty.resolveWith(
             (states) {
-              if (states.contains(MaterialState.hovered)) {
+              if (states.contains(WidgetState.hovered)) {
                 return hoverColor != null
                     ? hoverColor!.withOpacity(.2)
                     : color == null
                         ? theme.primaryColor.withOpacity(.2)
                         : color!.withOpacity(.2);
               }
-              if (states.contains(MaterialState.focused)) {
+              if (states.contains(WidgetState.focused)) {
                 return hoverColor != null
                     ? hoverColor!.withOpacity(.2)
                     : color == null
                         ? theme.primaryColor.withOpacity(.2)
                         : color!.withOpacity(.2);
               }
-              if (states.contains(MaterialState.pressed)) {
+              if (states.contains(WidgetState.pressed)) {
                 return hoverColor != null
                     ? hoverColor!.withOpacity(.4)
                     : color == null
@@ -150,8 +150,8 @@ class ShewaButton extends StatelessWidget {
               return Colors.transparent;
             },
           ),
-          minimumSize: MaterialStateProperty.all(Size.fromHeight(height)),
-          backgroundColor: MaterialStateProperty.resolveWith((states) {
+          minimumSize: WidgetStateProperty.all(Size.fromHeight(height)),
+          backgroundColor: WidgetStateProperty.resolveWith((states) {
             return color ?? theme.primaryColor;
           }),
         ),

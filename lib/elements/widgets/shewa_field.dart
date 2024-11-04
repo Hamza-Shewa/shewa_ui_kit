@@ -25,8 +25,8 @@ class ShewaField extends StatelessWidget {
     this.style,
     this.hintStyle,
     this.inputBorder,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   final Function(String)? onChanged;
   final Function(String)? onSubmit;

@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 class ShewaDivider extends StatelessWidget {
   const ShewaDivider({
-    Key? key,
+    super.key,
     this.indent = 0,
     this.endIndent = 0,
     this.height = 5,
     this.thickness = 1,
-  }) : super(key: key);
+  });
   final double indent;
   final double endIndent;
   final double height;
